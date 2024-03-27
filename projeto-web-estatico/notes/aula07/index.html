@@ -1,0 +1,78 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <form>
+        <fieldset>
+            <legend> Dados:</legend>
+            <br>
+            <label for="txtNome">Nome:</label>
+            <input id="txtNome" type="text">
+            <br><br>
+            <label for="txtSenha">Senha:</label>
+            <input id="txtSenha" type="password" placeholder="********">
+            <br><br>
+            <label for="txtData">Data:</label>
+            <input id="txtData" type="date" placeholder="dd/MM/aaaa">
+            <br><br>
+            <label for="txtNumero">Número:</label>
+            <input id="txtNumero" type="number" placeholder="número" min="0"  step="2"> <!-- max="1999" -->
+            <br><br>  
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend> Contato:</legend>
+            <br>
+            <label for="txtEmail">Email:</label>
+            <input id="txtEmail" type="email" placeholder="email@email.com" required>
+            <br><br>
+            <label for="txtSite">Site:</label>
+            <input id="txtSite" type="url" placeholder="http://www.exemplo.com.br">
+            <br><br>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend> Exemplos:</legend>
+            <br>
+            
+        <select>
+            <option>MG</option>
+            <option>SP</option>
+            <option>RJ</option>
+            <option>ES</option>
+        </select>
+        <br><br>
+
+        <label>Sexo:</label>
+        <input id="masc" type="radio" name="sexo" checked>
+        <label for="masc">Masculino</label>
+        <input id="fem" type="radio" name="sexo">
+        <label for="fem">Feminino</label>
+        <br><br>
+
+        <label for="">Liguagens de programação (domínio))</label>
+        <br><br>
+        <input type="checkbox" id="c">
+        <label for="c">C</label>
+        <br>
+        <input type="checkbox" id="java">
+        <label for="java">Java</label>
+        <br>
+        <input type="checkbox" id="js">
+        <label for="js">JavaScript</label>
+        <br><br>
+        </fieldset>
+        <br>
+
+        <!-- Seção de botões -->
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        <input type="button" value="Cancelar" onclick="alert('Olá, tudo bem!')">
+    </form>
+</body>
+</html>
