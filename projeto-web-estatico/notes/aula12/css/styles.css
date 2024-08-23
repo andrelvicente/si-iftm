@@ -1,0 +1,28 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.container {
+    border:5px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.container > div {
+    border:5px solid pink;
+}
+.apresentacao .container > div:nth-of-type(1) {
+    width: 30%;
+}
+.apresentacao .container > div:nth-of-type(2) {
+    width: 70%;
+}
+.produtos .container > div:nth-of-type(1)  {
+    width: 25%;
+}
+.produtos .container > div:nth-of-type(2) {
+    width: 50%;
+}
+.produtos .container > div:nth-of-type(3) {
+    width: 25%;
+}

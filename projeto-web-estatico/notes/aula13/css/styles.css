@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial;
+}
+
+main section {
+    background-color: rgb(238, 238, 238);
+    width: 1200px;
+    margin: auto;
+    padding: 50px;
+}
+
+main section h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+main section p {
+    margin: 20px 0px;
+    text-align: justify;
+}
+
+.destaque {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+main section button {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+main section button:hover {
+    background: orangered;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
