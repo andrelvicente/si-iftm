@@ -10,6 +10,17 @@ Anotações sobre Git e GitHub
 - Exemplos de comandos Git
 - Projetos de exemplo utilizando Git e GitHub
 
+## Forking um Projeto no GitHub
+
+Forkar um projeto no GitHub é como criar uma ramificação em um rio. Você começa com a mesma fonte, mas logo se torna um curso independente, com sua própria direção e destino.
+
+### Passos para Forkar um Projeto
+
+- Encontre o Projeto: Encontre o projeto que você deseja forkar e navegue até a sua página no GitHub.
+- Clique no Botão "Fork": No canto superior direito da página do projeto, clique no botão "Fork".
+- Escolha a Conta: Selecione a conta onde você deseja criar a cópia do projeto. Você pode escolher sua conta pessoal ou uma organização da qual você é membro.
+- Crie a Cópia: Clique em "Create fork" para criar a cópia do projeto.
+
 ## Objetivos
 
 - Aprender a utilizar Git para gerenciar e controlar versões de código
