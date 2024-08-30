@@ -6,21 +6,25 @@
 
 /* celular */
 .container {
-    border: 1px solid black;
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.apresentacao>div>div {
-    border: 2px solid red;
-    background-color: yellow;
+.introducao>div>div {
     width: 100%;
+    border: 2px solid blue;
 }
 
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .apresentacao>div>div {
-        background-color: blue;
+    .container {
+        flex-direction: row;
+    }
+    .introducao>div>div {
+        background-color: pink;
+        width: 50%;
     }
 }
 
@@ -29,7 +33,9 @@
     .container {
         flex-direction: row;
     }
-    .apresentacao>div>div {
+
+    .introducao>div>div {
         background-color: pink;
+        width: 25%;
     }
 }
