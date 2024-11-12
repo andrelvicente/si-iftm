@@ -1,0 +1,184 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header nav {
+    background-color: hsl(27, 66%, 71%);
+    list-style: none;
+}
+
+header ul {
+    text-align: center;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header nav a:link,
+header nav a:visited {
+    color: black;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    border-top: solid black;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+    border: 7px solid orange;
+    width: 1200px;
+}
+
+.introducao {
+    background-color: black;
+}
+
+section {
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    margin-bottom: 10px;
+}
+
+.introducao h1 {
+    padding: 10px 25px;
+}
+
+.introducao p {
+    padding: 10px 25px;
+}
+
+.introducao img {
+    width: 100%;
+}
+
+.container button {
+    background-color: orangered;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.container button:hover {
+    background-color: yellow;
+    cursor: pointer;
+    color: black;
+}
+
+.container>div {
+    width: 50%;
+    padding: 20px;
+}
+
+.btn_cadastrar {
+    margin-left: 25px;
+}
+
+.produtos {
+    text-align: center;
+    width: 1200px;
+    padding: 10px 25px;
+}
+
+.produtos p {
+    padding: 10px 25px;
+    margin-bottom: 40px;
+}
+
+.produtos h2 {
+    color: orangered;
+    padding: 15px 25px;
+}
+
+.pacotes h2 {
+    color: orangered;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.pacotes h3 {
+    padding: 10px 10px;
+}
+
+.pacotes p {
+    padding: 10px 10px;
+}
+
+.pacotes>div {
+    border: none;
+    text-align: justify;
+    background-color: rgb(180, 180, 180);
+}
+
+.pacotes img {
+    width: 250px;
+    height: 70%;
+    margin-left: 75px;
+}
+
+main section:nth-of-type(3) {
+    background-color: rgb(180, 180, 180);
+}
+
+.destinos {
+    text-align: justify;
+    width: 1200px;
+    padding: 10px 25px;
+}
+
+.destinos>div {
+    border: none;
+}
+
+section summary {
+    text-align: left;
+    color: orangered;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 30px 0px;
+}
+
+.destinos h2 {
+    color: orangered;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.videos {
+    text-align: justify;
+}
+
+.videos>div {
+    border: none;
+    background-color: hsl(27, 66%, 71%);
+    width: 1200px;
+}
+
+
+.videos h2 {
+    color: orangered;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+main section:nth-of-type(5) {
+    background-color: hsl(27, 66%, 71%);
+}

@@ -1,0 +1,102 @@
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: arial;
+    background-color: rgb(66, 66, 66);
+}
+header nav {
+    background-color: rgb(14, 14, 135);
+    list-style: none;
+    border-bottom: 5px solid yellow;
+}
+header ul {
+    text-align: center;
+}
+header ul li {
+    display: inline-block;
+}
+header nav a:link, header nav a:visited {
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+}
+header nav a:hover {
+    background-color: yellow;
+    color:black;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.container > div {
+    width:100%;
+    padding: 20px;
+}
+.faleconosco h2 {
+    color: orange;
+}
+section {
+    background-color: white;
+    width: 1200px;
+    margin:auto;
+    padding: 50px;
+    margin-bottom: 10px;
+}
+section p {
+    text-align: justify;
+    margin: 15px 0px;
+}
+.introducao img {
+    width:100%;
+}
+.introducao h1 {
+    color: red;
+}
+.celulares {
+    text-align: center;
+}
+.celulares h2 {
+    color:blue;
+}
+.celulares h2:hover {
+    color: red;
+    cursor: pointer;
+}
+.sobrenos img {
+    width: 70%;
+}
+.sobrenos a:link, .sobrenos a:visited {
+    color: blue;
+}
+.sobrenos ul li {
+    margin: 10px 0px;
+}
+section button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border:none;
+}
+section button:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+    color: black;
+}
+section summary {
+    text-align: left;
+    color: orangered;
+    font-weight: bold;
+    cursor: pointer;
+}
+footer {
+    background-color: black;
+}
+footer p {
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
