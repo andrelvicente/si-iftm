@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar?</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <label for="nivel">Nível: </label>
+            <select name="nivel" id="nivel">
+                <option value="selecione" selected disabled>Selecione</option>
+                <option value="facil">Fácil</option>
+                <option value="medio">Médio</option>
+                <option value="dificil">Difícil</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Tempo: <span id="tempoJogo">00:00</span></p>
+        </div>
+        
+        <div>
+            <button id="btnIniciar" disabled>INICIAR</button>
+            <button id="btnPausar" disabled>PAUSAR</button>
+            <button id="btnParar">PARAR</button>
+        </div>
+    </header>
+
+    <main>
+        <span id="numeroSorteado">-</span>
+    </main>
+
+    <footer>
+        <div>
+            <p>Acertos: <span id="acertos">0</span> (<span id="percentualAcertos">0.0%</span>)</p>
+        </div>
+        <div>
+            <p>Erros: <span id="erros">0</span></p>
+        </div>
+        <div>
+            <p>Números pares sorteadores: <span id="pares">0</span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
