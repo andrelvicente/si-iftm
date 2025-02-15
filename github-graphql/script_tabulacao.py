@@ -1,8 +1,6 @@
 import requests
 import pandas as pd
 
-access_token = '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'
-
 def run_query(query):
     """Executa uma query GraphQL na API do GitHub."""
     url = 'https://api.github.com/graphql'
