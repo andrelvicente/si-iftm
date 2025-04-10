@@ -28,9 +28,10 @@ window.addEventListener("DOMContentLoaded", function () {
     const men = tableData.filter(p => p.gender === 'M');
     const women = tableData.filter(p => p.gender === 'F');
 
-    const avgSalary = arr => arr.reduce((sum, p) => sum + p.salary, 0) / arr.length;
-
     console.log("\nMédia salarial:");
     console.log(`Homens: R$ ${avgSalary(men).toFixed(2)}`);
     console.log(`Mulheres: R$ ${avgSalary(women).toFixed(2)}`);
 });
+
+
+const avgSalary = arr => arr.reduce((sum, p) => sum + p.salary, 0) / arr.length;
