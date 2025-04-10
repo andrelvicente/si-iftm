@@ -11,7 +11,7 @@ export function carregarComFetch(url) {
         console.log('Fetch:', `Nome: ${data.nome}, Idade: ${data.idade}`);
       })
       .catch(error => {
-        console.error('Erro (fetch):', error);
+        console.error('Erro na requisição fetch:', error);
       });
   }
   

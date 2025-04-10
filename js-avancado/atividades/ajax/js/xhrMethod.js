@@ -3,16 +3,17 @@ export function carregarComXHR(url) {
     xhr.open('GET', url, true);
   
     xhr.onload = function () {
-      if (xhr.status === 200) {
-        const data = JSON.parse(xhr.responseText);
-        console.log('XMLHttpRequest:', `Nome: ${data.nome}, Idade: ${data.idade}`);
-      } else {
-        console.error('Erro na requisição XHR:', xhr.statusText);
+      if (xhr.status != 200) {
+        throw new Error('Erro na requisição XHR');
       }
+
+      const data = JSON.parse(xhr.responseText);
+      console.log('XMLHttpRequest:', `Nome: ${data.nome}, Idade: ${data.idade}`);
+
     };
   
     xhr.onerror = function () {
-      console.error('Erro de rede na requisição XHR');
+      console.error('Erro na requisição XHR');
     };
   
     xhr.send();
