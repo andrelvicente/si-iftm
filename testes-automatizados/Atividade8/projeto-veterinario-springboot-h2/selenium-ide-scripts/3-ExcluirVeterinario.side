@@ -1,0 +1,189 @@
+{
+  "id": "excluir-veterinario",
+  "version": "2.0",
+  "name": "Excluir Veterinário",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "test-excluir-veterinario",
+    "name": "Excluir veterinário existente",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Excluir veterinário existente",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Aguardar carregamento da página",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-3",
+      "comment": "Verificar se existem veterinários na tabela",
+      "command": "assertElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-4",
+      "comment": "Cadastrar um veterinário para excluir",
+      "command": "click",
+      "target": "linkText=Adicionar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-5",
+      "comment": "Aguardar formulário",
+      "command": "waitForElementPresent",
+      "target": "id=nome",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-6",
+      "comment": "Preencher nome",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dr. Para Excluir"
+    }, {
+      "id": "cmd-7",
+      "comment": "Preencher email",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": "excluir@teste.com"
+    }, {
+      "id": "cmd-8",
+      "comment": "Preencher especialidade",
+      "command": "type",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": "Teste"
+    }, {
+      "id": "cmd-9",
+      "comment": "Preencher salário",
+      "command": "type",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": "1000.00"
+    }, {
+      "id": "cmd-10",
+      "comment": "Clicar em Cadastrar",
+      "command": "click",
+      "target": "xpath=//button[@type='submit' and text()='Cadastrar']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-11",
+      "comment": "Aguardar redirecionamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-12",
+      "comment": "Verificar se veterinário foi cadastrado",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Dr. Para Excluir*"
+    }, {
+      "id": "cmd-13",
+      "comment": "Verificar se botão de exclusão existe",
+      "command": "assertElementPresent",
+      "target": "css=.btn-danger",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-14",
+      "comment": "Clicar no botão de excluir",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[contains(@class, 'btn-danger')]", "xpath"]
+      ],
+      "value": ""
+    }, {
+      "id": "cmd-15",
+      "comment": "Aguardar redirecionamento após exclusão",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-16",
+      "comment": "Verificar se veterinário foi removido",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "!*Dr. Para Excluir*"
+    }]
+  }, {
+    "id": "test-verificar-botoes-exclusao",
+    "name": "Verificar botões de exclusão",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Verificar presença de botões de exclusão",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Aguardar carregamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-3",
+      "comment": "Verificar estrutura da tabela",
+      "command": "assertElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-4",
+      "comment": "Verificar cabeçalhos da tabela",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Nome*"
+    }, {
+      "id": "cmd-5",
+      "comment": "Verificar coluna especialidade",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Especialidade*"
+    }, {
+      "id": "cmd-6",
+      "comment": "Verificar coluna email",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Email*"
+    }, {
+      "id": "cmd-7",
+      "comment": "Verificar coluna salário",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Salario*"
+    }]
+  }],
+  "suites": [{
+    "id": "suite-excluir",
+    "name": "Suite Excluir Veterinário",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["test-excluir-veterinario", "test-verificar-botoes-exclusao"]
+  }],
+  "urls": ["http://localhost:8080"],
+  "plugins": []
+}

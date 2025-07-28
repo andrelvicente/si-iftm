@@ -1,0 +1,33 @@
+.full-width {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.full-width td {
+    width: 50%;
+    vertical-align: center;
+}
+
+.justify-content {
+    text-align: justify;
+    padding: 70px;
+}
+
+.justify-content h2{
+    text-align: justify;
+}
+
+.decorative-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+
+}
+
+.decorative-button:hover {
+    background-color: #e0e0e0;
+}

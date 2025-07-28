@@ -1,0 +1,10 @@
+function Apresentacao() {
+  return (
+    <div>
+      <h1>Apresentação</h1>
+      <p>Olá, meu nome é João e sou desenvolvedor web.</p>
+      <p>Estou aprendendo React e estou animado para criar aplicações incríveis!</p>
+    </div>
+  );
+}
+export default Apresentacao;

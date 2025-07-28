@@ -1,0 +1,183 @@
+{
+  "id": "pesquisar-veterinario",
+  "version": "2.0",
+  "name": "Pesquisar Veterinário",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "test-pesquisar-veterinario",
+    "name": "Pesquisar veterinário por nome",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Pesquisar veterinário por nome existente",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Clicar no botão Consultar",
+      "command": "click",
+      "target": "linkText=Consultar",
+      "targets": [
+        ["linkText=Consultar", "linkText"],
+        ["css=.btn-dark:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Consultar')]", "xpath:link"]
+      ],
+      "value": ""
+    }, {
+      "id": "cmd-3",
+      "comment": "Aguardar carregamento da página de pesquisa",
+      "command": "waitForElementPresent",
+      "target": "id=nome",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-4",
+      "comment": "Verificar título da página",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Pesquisar veterinários"
+    }, {
+      "id": "cmd-5",
+      "comment": "Verificar campo nome está vazio",
+      "command": "assertValue",
+      "target": "id=nome",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-6",
+      "comment": "Verificar placeholder do campo nome",
+      "command": "assertAttribute",
+      "target": "id=nome@placeholder",
+      "targets": [],
+      "value": "Nome Completo"
+    }, {
+      "id": "cmd-7",
+      "comment": "Preencher campo de pesquisa",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"]
+      ],
+      "value": "Dr. João"
+    }, {
+      "id": "cmd-8",
+      "comment": "Verificar valor digitado",
+      "command": "assertValue",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dr. João"
+    }, {
+      "id": "cmd-9",
+      "comment": "Clicar no botão Consultar",
+      "command": "click",
+      "target": "xpath=//button[@type='submit' and text()='Consultar']",
+      "targets": [
+        ["xpath=//button[@type='submit' and text()='Consultar']", "xpath"],
+        ["css=button[type=\"submit\"]", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cmd-10",
+      "comment": "Aguardar carregamento dos resultados",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-11",
+      "comment": "Verificar se está na página de resultados",
+      "command": "assertElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-12",
+      "comment": "Verificar cabeçalhos da tabela - Nome",
+      "command": "assertText",
+      "target": "xpath=//th[text()='Nome']",
+      "targets": [],
+      "value": "Nome"
+    }, {
+      "id": "cmd-13",
+      "comment": "Verificar cabeçalhos da tabela - Especialidade",
+      "command": "assertText",
+      "target": "xpath=//th[text()='Especialidade']",
+      "targets": [],
+      "value": "Especialidade"
+    }, {
+      "id": "cmd-14",
+      "comment": "Verificar cabeçalhos da tabela - Email",
+      "command": "assertText",
+      "target": "xpath=//th[text()='Email']",
+      "targets": [],
+      "value": "Email"
+    }, {
+      "id": "cmd-15",
+      "comment": "Verificar cabeçalhos da tabela - Salario",
+      "command": "assertText",
+      "target": "xpath=//th[text()='Salario']",
+      "targets": [],
+      "value": "Salario"
+    }]
+  }, {
+    "id": "test-pesquisar-vazio",
+    "name": "Pesquisar com campo vazio",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Pesquisar com campo vazio",
+      "command": "open",
+      "target": "/find",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Aguardar carregamento",
+      "command": "waitForElementPresent",
+      "target": "id=nome",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-3",
+      "comment": "Verificar campo está vazio",
+      "command": "assertValue",
+      "target": "id=nome",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-4",
+      "comment": "Clicar diretamente em Consultar",
+      "command": "click",
+      "target": "xpath=//button[@type='submit' and text()='Consultar']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-5",
+      "comment": "Aguardar resultados",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-6",
+      "comment": "Verificar que tabela existe (lista todos)",
+      "command": "assertElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "suite-pesquisar",
+    "name": "Suite Pesquisar Veterinário",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["test-pesquisar-veterinario", "test-pesquisar-vazio"]
+  }],
+  "urls": ["http://localhost:8080"],
+  "plugins": []
+}

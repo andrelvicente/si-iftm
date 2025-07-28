@@ -1,0 +1,163 @@
+{
+  "id": "cadastrar-veterinario",
+  "version": "2.0",
+  "name": "Cadastrar Veterinário",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "test-cadastrar-veterinario",
+    "name": "Cadastrar veterinário com dados válidos",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Cadastrar veterinário com dados válidos",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Clicar no botão Adicionar",
+      "command": "click",
+      "target": "linkText=Adicionar",
+      "targets": [
+        ["linkText=Adicionar", "linkText"],
+        ["css=.btn-dark", "css:finder"],
+        ["xpath=//a[contains(text(),'Adicionar')]", "xpath:link"]
+      ],
+      "value": ""
+    }, {
+      "id": "cmd-3",
+      "comment": "Aguardar carregamento da página",
+      "command": "waitForElementPresent",
+      "target": "id=nome",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-4",
+      "comment": "Preencher campo Nome",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"]
+      ],
+      "value": "Dr. João Silva"
+    }, {
+      "id": "cmd-5",
+      "comment": "Preencher campo Email",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [
+        ["id=inputEmail", "id"],
+        ["name=email", "name"],
+        ["css=#inputEmail", "css:finder"]
+      ],
+      "value": "joao.silva@veterinaria.com"
+    }, {
+      "id": "cmd-6",
+      "comment": "Preencher campo Especialidade",
+      "command": "type",
+      "target": "id=inputEspecialidade",
+      "targets": [
+        ["id=inputEspecialidade", "id"],
+        ["name=especialidade", "name"],
+        ["css=#inputEspecialidade", "css:finder"]
+      ],
+      "value": "Cirurgia Veterinária"
+    }, {
+      "id": "cmd-7",
+      "comment": "Preencher campo Salário",
+      "command": "type",
+      "target": "id=inputSalario",
+      "targets": [
+        ["id=inputSalario", "id"],
+        ["name=salario", "name"],
+        ["css=#inputSalario", "css:finder"]
+      ],
+      "value": "5000.00"
+    }, {
+      "id": "cmd-8",
+      "comment": "Verificar valores preenchidos",
+      "command": "assertValue",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dr. João Silva"
+    }, {
+      "id": "cmd-9",
+      "comment": "Verificar email preenchido",
+      "command": "assertValue",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": "joao.silva@veterinaria.com"
+    }, {
+      "id": "cmd-10",
+      "comment": "Verificar especialidade preenchida",
+      "command": "assertValue",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": "Cirurgia Veterinária"
+    }, {
+      "id": "cmd-11",
+      "comment": "Verificar salário preenchido",
+      "command": "assertValue",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": "5000.00"
+    }, {
+      "id": "cmd-12",
+      "comment": "Clicar no botão Cadastrar",
+      "command": "click",
+      "target": "xpath=//button[@type='submit' and text()='Cadastrar']",
+      "targets": [
+        ["xpath=//button[@type='submit' and text()='Cadastrar']", "xpath"],
+        ["css=button[type=\"submit\"]", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cmd-13",
+      "comment": "Aguardar redirecionamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-14",
+      "comment": "Verificar se veterinário aparece na tabela - Nome",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Dr. João Silva*"
+    }, {
+      "id": "cmd-15",
+      "comment": "Verificar se veterinário aparece na tabela - Email",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*joao.silva@veterinaria.com*"
+    }, {
+      "id": "cmd-16",
+      "comment": "Verificar se veterinário aparece na tabela - Especialidade",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Cirurgia Veterinária*"
+    }, {
+      "id": "cmd-17",
+      "comment": "Verificar se veterinário aparece na tabela - Salário",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*R$5000.00*"
+    }]
+  }],
+  "suites": [{
+    "id": "suite-cadastrar",
+    "name": "Suite Cadastrar Veterinário",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["test-cadastrar-veterinario"]
+  }],
+  "urls": ["http://localhost:8080"],
+  "plugins": []
+}

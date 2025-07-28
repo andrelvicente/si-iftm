@@ -1,0 +1,286 @@
+{
+  "id": "alterar-veterinario",
+  "version": "2.0",
+  "name": "Alterar Veterinário",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "test-alterar-veterinario",
+    "name": "Alterar dados de veterinário",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Alterar dados de veterinário existente",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Aguardar carregamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-3",
+      "comment": "Cadastrar veterinário para alterar",
+      "command": "click",
+      "target": "linkText=Adicionar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-4",
+      "comment": "Aguardar formulário",
+      "command": "waitForElementPresent",
+      "target": "id=nome",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-5",
+      "comment": "Preencher nome original",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dr. Original"
+    }, {
+      "id": "cmd-6",
+      "comment": "Preencher email original",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": "original@teste.com"
+    }, {
+      "id": "cmd-7",
+      "comment": "Preencher especialidade original",
+      "command": "type",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": "Clínica Geral"
+    }, {
+      "id": "cmd-8",
+      "comment": "Preencher salário original",
+      "command": "type",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": "3000.00"
+    }, {
+      "id": "cmd-9",
+      "comment": "Cadastrar veterinário",
+      "command": "click",
+      "target": "xpath=//button[@type='submit' and text()='Cadastrar']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-10",
+      "comment": "Aguardar redirecionamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-11",
+      "comment": "Verificar se veterinário foi cadastrado",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Dr. Original*"
+    }, {
+      "id": "cmd-12",
+      "comment": "Verificar se botão de editar existe",
+      "command": "assertElementPresent",
+      "target": "css=.btn-warning",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-13",
+      "comment": "Clicar no botão de editar",
+      "command": "click",
+      "target": "css=.btn-warning",
+      "targets": [
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//a[contains(@class, 'btn-warning')]", "xpath"]
+      ],
+      "value": ""
+    }, {
+      "id": "cmd-14",
+      "comment": "Aguardar formulário de edição",
+      "command": "waitForElementPresent",
+      "target": "id=nome",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-15",
+      "comment": "Verificar se campos estão preenchidos - Nome",
+      "command": "assertValue",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dr. Original"
+    }, {
+      "id": "cmd-16",
+      "comment": "Verificar se campos estão preenchidos - Email",
+      "command": "assertValue",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": "original@teste.com"
+    }, {
+      "id": "cmd-17",
+      "comment": "Verificar se campos estão preenchidos - Especialidade",
+      "command": "assertValue",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": "Clínica Geral"
+    }, {
+      "id": "cmd-18",
+      "comment": "Verificar se campos estão preenchidos - Salário",
+      "command": "assertValue",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": "3000.00"
+    }, {
+      "id": "cmd-19",
+      "comment": "Limpar e alterar nome",
+      "command": "clear",
+      "target": "id=nome",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-20",
+      "comment": "Digitar novo nome",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dr. Alterado"
+    }, {
+      "id": "cmd-21",
+      "comment": "Limpar e alterar email",
+      "command": "clear",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-22",
+      "comment": "Digitar novo email",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": "alterado@teste.com"
+    }, {
+      "id": "cmd-23",
+      "comment": "Limpar e alterar especialidade",
+      "command": "clear",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-24",
+      "comment": "Digitar nova especialidade",
+      "command": "type",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": "Cirurgia"
+    }, {
+      "id": "cmd-25",
+      "comment": "Limpar e alterar salário",
+      "command": "clear",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-26",
+      "comment": "Digitar novo salário",
+      "command": "type",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": "4500.00"
+    }, {
+      "id": "cmd-27",
+      "comment": "Verificar novos valores - Nome",
+      "command": "assertValue",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dr. Alterado"
+    }, {
+      "id": "cmd-28",
+      "comment": "Verificar novos valores - Email",
+      "command": "assertValue",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": "alterado@teste.com"
+    }, {
+      "id": "cmd-29",
+      "comment": "Verificar novos valores - Especialidade",
+      "command": "assertValue",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": "Cirurgia"
+    }, {
+      "id": "cmd-30",
+      "comment": "Verificar novos valores - Salário",
+      "command": "assertValue",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": "4500.00"
+    }, {
+      "id": "cmd-31",
+      "comment": "Clicar no botão de atualizar",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["xpath=//button[@type='submit']", "xpath"],
+        ["css=button[type=\"submit\"]", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cmd-32",
+      "comment": "Aguardar redirecionamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-33",
+      "comment": "Verificar dados alterados na tabela - Nome",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Dr. Alterado*"
+    }, {
+      "id": "cmd-34",
+      "comment": "Verificar dados alterados na tabela - Email",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*alterado@teste.com*"
+    }, {
+      "id": "cmd-35",
+      "comment": "Verificar dados alterados na tabela - Especialidade",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Cirurgia*"
+    }, {
+      "id": "cmd-36",
+      "comment": "Verificar dados alterados na tabela - Salário",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*R$4500.00*"
+    }, {
+      "id": "cmd-37",
+      "comment": "Verificar que dados originais não existem mais",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "!*Dr. Original*"
+    }]
+  }],
+  "suites": [{
+    "id": "suite-alterar",
+    "name": "Suite Alterar Veterinário",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["test-alterar-veterinario"]
+  }],
+  "urls": ["http://localhost:8080"],
+  "plugins": []
+}

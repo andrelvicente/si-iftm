@@ -1,0 +1,15 @@
+import React from 'react';
+import Box from './Box';
+
+const Main = () => {
+    return (
+        <main>
+            <p>Sou Main</p>
+            <Box>SOU ANDRÉ</Box>
+            <Box>SOU ANDRÉ</Box>
+            <Box>SOU ANDRÉ</Box>
+        </main>
+    );
+};
+
+export default Main;

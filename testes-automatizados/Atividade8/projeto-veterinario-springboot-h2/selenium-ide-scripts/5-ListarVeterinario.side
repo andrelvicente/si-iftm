@@ -1,0 +1,400 @@
+{
+  "id": "listar-veterinario",
+  "version": "2.0",
+  "name": "Listar Veterinário",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "test-listar-veterinarios",
+    "name": "Verificar listagem de veterinários",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Verificar estrutura e conteúdo da listagem",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Aguardar carregamento da página",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-3",
+      "comment": "Verificar título da página",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "Veterinarios"
+    }, {
+      "id": "cmd-4",
+      "comment": "Verificar se tabela existe",
+      "command": "assertElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-5",
+      "comment": "Verificar classe da tabela",
+      "command": "assertAttribute",
+      "target": "css=.table@class",
+      "targets": [],
+      "value": "*table*"
+    }, {
+      "id": "cmd-6",
+      "comment": "Verificar classe table-light",
+      "command": "assertAttribute",
+      "target": "css=.table@class",
+      "targets": [],
+      "value": "*table-light*"
+    }, {
+      "id": "cmd-7",
+      "comment": "Verificar cabeçalho da tabela",
+      "command": "assertElementPresent",
+      "target": "css=.table-dark",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-8",
+      "comment": "Verificar cabeçalho Nome",
+      "command": "assertText",
+      "target": "xpath=//th[text()='Nome']",
+      "targets": [],
+      "value": "Nome"
+    }, {
+      "id": "cmd-9",
+      "comment": "Verificar cabeçalho Especialidade",
+      "command": "assertText",
+      "target": "xpath=//th[text()='Especialidade']",
+      "targets": [],
+      "value": "Especialidade"
+    }, {
+      "id": "cmd-10",
+      "comment": "Verificar cabeçalho Email",
+      "command": "assertText",
+      "target": "xpath=//th[text()='Email']",
+      "targets": [],
+      "value": "Email"
+    }, {
+      "id": "cmd-11",
+      "comment": "Verificar cabeçalho Salario",
+      "command": "assertText",
+      "target": "xpath=//th[text()='Salario']",
+      "targets": [],
+      "value": "Salario"
+    }, {
+      "id": "cmd-12",
+      "comment": "Verificar botão Adicionar",
+      "command": "assertElementPresent",
+      "target": "linkText=Adicionar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-13",
+      "comment": "Verificar texto do botão Adicionar",
+      "command": "assertText",
+      "target": "linkText=Adicionar",
+      "targets": [],
+      "value": "Adicionar"
+    }, {
+      "id": "cmd-14",
+      "comment": "Verificar classe do botão Adicionar",
+      "command": "assertAttribute",
+      "target": "linkText=Adicionar@class",
+      "targets": [],
+      "value": "*btn-dark*"
+    }, {
+      "id": "cmd-15",
+      "comment": "Verificar botão Consultar",
+      "command": "assertElementPresent",
+      "target": "linkText=Consultar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-16",
+      "comment": "Verificar texto do botão Consultar",
+      "command": "assertText",
+      "target": "linkText=Consultar",
+      "targets": [],
+      "value": "Consultar"
+    }, {
+      "id": "cmd-17",
+      "comment": "Verificar classe do botão Consultar",
+      "command": "assertAttribute",
+      "target": "linkText=Consultar@class",
+      "targets": [],
+      "value": "*btn-dark*"
+    }]
+  }, {
+    "id": "test-listar-com-dados",
+    "name": "Verificar listagem com dados",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Cadastrar veterinários e verificar listagem",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Aguardar carregamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-3",
+      "comment": "Cadastrar primeiro veterinário",
+      "command": "click",
+      "target": "linkText=Adicionar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-4",
+      "comment": "Aguardar formulário",
+      "command": "waitForElementPresent",
+      "target": "id=nome",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-5",
+      "comment": "Preencher nome",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dr. João da Silva"
+    }, {
+      "id": "cmd-6",
+      "comment": "Preencher email",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": "joao@vet.com"
+    }, {
+      "id": "cmd-7",
+      "comment": "Preencher especialidade",
+      "command": "type",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": "Cirurgia"
+    }, {
+      "id": "cmd-8",
+      "comment": "Preencher salário",
+      "command": "type",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": "5000.00"
+    }, {
+      "id": "cmd-9",
+      "comment": "Cadastrar",
+      "command": "click",
+      "target": "xpath=//button[@type='submit' and text()='Cadastrar']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-10",
+      "comment": "Aguardar redirecionamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-11",
+      "comment": "Verificar primeiro veterinário na tabela - Nome",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Dr. João da Silva*"
+    }, {
+      "id": "cmd-12",
+      "comment": "Verificar primeiro veterinário na tabela - Email",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*joao@vet.com*"
+    }, {
+      "id": "cmd-13",
+      "comment": "Verificar primeiro veterinário na tabela - Especialidade",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Cirurgia*"
+    }, {
+      "id": "cmd-14",
+      "comment": "Verificar primeiro veterinário na tabela - Salário",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*R$5000.00*"
+    }, {
+      "id": "cmd-15",
+      "comment": "Cadastrar segundo veterinário",
+      "command": "click",
+      "target": "linkText=Adicionar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-16",
+      "comment": "Aguardar formulário",
+      "command": "waitForElementPresent",
+      "target": "id=nome",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-17",
+      "comment": "Preencher nome 2",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [],
+      "value": "Dra. Maria Santos"
+    }, {
+      "id": "cmd-18",
+      "comment": "Preencher email 2",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [],
+      "value": "maria@vet.com"
+    }, {
+      "id": "cmd-19",
+      "comment": "Preencher especialidade 2",
+      "command": "type",
+      "target": "id=inputEspecialidade",
+      "targets": [],
+      "value": "Clínica Geral"
+    }, {
+      "id": "cmd-20",
+      "comment": "Preencher salário 2",
+      "command": "type",
+      "target": "id=inputSalario",
+      "targets": [],
+      "value": "4500.00"
+    }, {
+      "id": "cmd-21",
+      "comment": "Cadastrar segundo",
+      "command": "click",
+      "target": "xpath=//button[@type='submit' and text()='Cadastrar']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-22",
+      "comment": "Aguardar redirecionamento",
+      "command": "waitForElementPresent",
+      "target": "css=.table",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-23",
+      "comment": "Verificar segundo veterinário na tabela - Nome",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Dra. Maria Santos*"
+    }, {
+      "id": "cmd-24",
+      "comment": "Verificar segundo veterinário na tabela - Email",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*maria@vet.com*"
+    }, {
+      "id": "cmd-25",
+      "comment": "Verificar segundo veterinário na tabela - Especialidade",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Clínica Geral*"
+    }, {
+      "id": "cmd-26",
+      "comment": "Verificar segundo veterinário na tabela - Salário",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*R$4500.00*"
+    }, {
+      "id": "cmd-27",
+      "comment": "Verificar que ambos estão na tabela",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*Dr. João da Silva*"
+    }, {
+      "id": "cmd-28",
+      "comment": "Verificar formatação do salário",
+      "command": "assertText",
+      "target": "css=.table",
+      "targets": [],
+      "value": "*R$*"
+    }]
+  }, {
+    "id": "test-navegacao-botoes",
+    "name": "Testar navegação dos botões",
+    "commands": [{
+      "id": "cmd-1",
+      "comment": "Cenário: Testar funcionalidade dos botões de navegação",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-2",
+      "comment": "Aguardar carregamento",
+      "command": "waitForElementPresent",
+      "target": "linkText=Adicionar",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-3",
+      "comment": "Clicar no botão Adicionar",
+      "command": "click",
+      "target": "linkText=Adicionar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-4",
+      "comment": "Verificar se navegou para formulário",
+      "command": "assertLocation",
+      "target": "*/form",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-5",
+      "comment": "Voltar para home",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-6",
+      "comment": "Aguardar carregamento",
+      "command": "waitForElementPresent",
+      "target": "linkText=Consultar",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cmd-7",
+      "comment": "Clicar no botão Consultar",
+      "command": "click",
+      "target": "linkText=Consultar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-8",
+      "comment": "Verificar se navegou para pesquisa",
+      "command": "assertLocation",
+      "target": "*/find",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "suite-listar",
+    "name": "Suite Listar Veterinário",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["test-listar-veterinarios", "test-listar-com-dados", "test-navegacao-botoes"]
+  }],
+  "urls": ["http://localhost:8080"],
+  "plugins": []
+}
