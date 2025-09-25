@@ -1,9 +1,11 @@
 
 package com.example.example.services;
 
-import com.example.example.dtos.UserDTO;
 import com.example.example.models.User;
+import com.example.example.models.dto.UserDTO;
 import com.example.example.repositories.UserRepository;
+
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,101 +20,63 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
-    // LISTAR TODOS
     public ResponseEntity<List<UserDTO>> findAll() {
-        var dbusers = repository.findAll();
-        if (dbusers.isEmpty()) {
+        var dbUsers = repository.findAll();
+        if (dbUsers.isEmpty())
             return ResponseEntity.notFound().build();
-        }
 
-        var userDTOs = dbusers.stream().map(u -> {
-            var userDTO = new UserDTO();
-            userDTO.setId(u.getId());
-            userDTO.setName(u.getName());
-            userDTO.setAge(u.getAge());
+        var userDtos = dbUsers.stream().map(user -> {
+            var userDTO = new UserDTO(user);
             return userDTO;
         }).collect(Collectors.toList());
 
-        return ResponseEntity.ok(userDTOs);
+        return ResponseEntity.ok(userDtos);
     }
 
-    // BUSCAR POR ID
-    public ResponseEntity<UserDTO> findById(Object id) {
-        if (id == null) {
+    public ResponseEntity<UserDTO> findById(ObjectId id) {
+        if (id == null)
             return ResponseEntity.badRequest().build();
-        }
-        var dbuser = repository.findById(id);
-        if (dbuser.isEmpty()) {
-            return ResponseEntity.notFound().build();
-        }
+        var dbUser = repository.findById(id);
 
-        var u = dbuser.get();
-        var dto = new UserDTO();
-        dto.setId(u.getId());
-        dto.setName(u.getName());
-        dto.setAge(u.getAge());
-        return ResponseEntity.ok(dto);
+        if (dbUser.isEmpty())
+            return ResponseEntity.notFound().build();
+
+        return ResponseEntity.ok(new UserDTO(dbUser.get()));
     }
 
-    // SALVAR
     public ResponseEntity<UserDTO> save(User user) {
-        // validar usuário
-        if (user == null) {
+        if (user.getName().isBlank() || user.getAge() <= 0)
             return ResponseEntity.badRequest().build();
-        }
-        if (user.getName() == null || user.getAge() <= 0) {
-            return ResponseEntity.badRequest().build();
-        }
-        user.setId(null); // garante inclusão
-
-        var saved = repository.save(user);
-
-        var dto = new UserDTO();
-        dto.setId(saved.getId());
-        dto.setName(saved.getName());
-        dto.setAge(saved.getAge());
-        return ResponseEntity.ok(dto);
+        user.setId(ObjectId.get());
+        return ResponseEntity.ok(new UserDTO(repository.save(user)));
     }
 
-    // ATUALIZAR
-    public ResponseEntity<UserDTO> update(User user) {
-        // validar
-        if (user == null || user.getId() == null) {
+    public ResponseEntity<UserDTO> update(UserDTO user) {
+        if (user.getId() == null)
             return ResponseEntity.badRequest().build();
-        }
 
-        var dbuser = repository.findById(user.getId());
-        if (dbuser.isEmpty()) {
+        var ObjectId = new ObjectId(user.getId());
+        var dbUser = repository.findById(ObjectId);
+
+        if (dbUser.isEmpty())
             return ResponseEntity.notFound().build();
-        }
 
-        var entity = dbuser.get();
-        // alterar
-        entity.setName(user.getName());
-        entity.setAge(user.getAge());
-
-        var updated = repository.save(entity);
-
-        var dto = new UserDTO();
-        dto.setId(updated.getId());
-        dto.setName(updated.getName());
-        dto.setAge(updated.getAge());
-        return ResponseEntity.ok(dto);
+        var dbUserObj = dbUser.get();
+        dbUserObj.setName(user.getName());
+        dbUserObj.setAge(user.getAge());
+        return ResponseEntity.ok(new UserDTO(repository.save(dbUserObj)));
     }
 
-    // DELETAR
-    public ResponseEntity<?> delete(Object id) {
-        if (id == null) {
+    public ResponseEntity<?> delete(ObjectId id) {
+        if (id == null)
             return ResponseEntity.badRequest().build();
-        }
-
         repository.deleteById(id);
 
         var dbUser = repository.findById(id);
-        if (dbUser.isPresent()) {
+
+        if (dbUser.isPresent())
             return ResponseEntity.status(HttpStatus.NOT_MODIFIED).build();
-        }
         return ResponseEntity.ok().build();
     }
-}
 
+}
