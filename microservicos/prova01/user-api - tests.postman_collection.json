@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "394c9f7c-4597-40f9-8e71-e791a2f53a10",
+		"name": "user-api - tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1330208"
+	},
+	"item": [
+		{
+			"name": "POST user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"userId\", pm.response.json().id);",
+							"pm.test(\"Response status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"pm.test(\"Check if the response data contains specified values\", function () {",
+							"    var responseData = pm.response.json();",
+							"    pm.expect(responseData).to.include({",
+							"        \"nome\": \"Correcao\",",
+							"        \"cpf\": \"9999\",",
+							"        \"endereco\": \"Avenida Salim\",",
+							"        \"email\": \"abc@maria.com\",",
+							"        \"telefone\": \"88888-9999\"",
+							"    });",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Correcao\",\n    \"cpf\": \"9999\",\n    \"endereco\": \"Avenida Salim\",\n    \"email\": \"abc@maria.com\",\n    \"telefone\": \"88888-9999\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user"
+			},
+			"response": []
+		},
+		{
+			"name": "GET all users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response is an array with specific fields\", function () {",
+							"  var responseData = pm.response.json();",
+							"  pm.expect(responseData).to.be.an('array');",
+							"  responseData.forEach(function(user) {",
+							"    pm.expect(user).to.have.property('nome');",
+							"    pm.expect(user).to.have.property('cpf');",
+							"    pm.expect(user).to.have.property('endereco');",
+							"    pm.expect(user).to.have.property('email');",
+							"    pm.expect(user).to.have.property('telefone');",
+							"  });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user"
+			},
+			"response": []
+		},
+		{
+			"name": "GET findById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test for response status code",
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var responseJSON = pm.response.json();",
+							"",
+							"// Test for the existence of required fields in the response data",
+							"pm.test(\"Response data contains required fields\", function () {",
+							"    pm.expect(responseJSON).to.have.property('nome');",
+							"    pm.expect(responseJSON).to.have.property('cpf');",
+							"    pm.expect(responseJSON).to.have.property('endereco');",
+							"    pm.expect(responseJSON).to.have.property('email');",
+							"    pm.expect(responseJSON).to.have.property('telefone');",
+							"});",
+							"",
+							"pm.test(\"Check if the response data contains specified values\", function () {",
+							"    var responseData = pm.response.json();",
+							"    pm.expect(responseData).to.include({",
+							"        \"nome\": \"Correcao\",",
+							"        \"cpf\": \"9999\",",
+							"        \"endereco\": \"Avenida Salim\",",
+							"        \"email\": \"abc@maria.com\",",
+							"        \"telefone\": \"88888-9999\"",
+							"    });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/{{userId}}"
+			},
+			"response": []
+		},
+		{
+			"name": "GET findByCpf",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test for response status code",
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var responseJSON = pm.response.json();",
+							"",
+							"// Test for the existence of required fields in the response data",
+							"pm.test(\"Response data contains required fields\", function () {",
+							"    pm.expect(responseJSON).to.have.property('nome');",
+							"    pm.expect(responseJSON).to.have.property('cpf');",
+							"    pm.expect(responseJSON).to.have.property('endereco');",
+							"    pm.expect(responseJSON).to.have.property('email');",
+							"    pm.expect(responseJSON).to.have.property('telefone');",
+							"});",
+							"",
+							"pm.test(\"Check if the response data contains specified values\", function () {",
+							"    var responseData = pm.response.json();",
+							"    pm.expect(responseData).to.include({",
+							"        \"nome\": \"Correcao\",",
+							"        \"cpf\": \"9999\",",
+							"        \"endereco\": \"Avenida Salim\",",
+							"        \"email\": \"abc@maria.com\",",
+							"        \"telefone\": \"88888-9999\"",
+							"    });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/9999/cpf"
+			},
+			"response": []
+		},
+		{
+			"name": "GET search by name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response is an array with specified properties\", function () {",
+							"  var responseData = pm.response.json();",
+							"  pm.expect(responseData).to.be.an('array');",
+							"",
+							"  responseData.forEach(function(user) {",
+							"    pm.expect(user).to.have.property('id');",
+							"    pm.expect(user).to.have.property('nome');",
+							"    pm.expect(user).to.have.property('cpf');",
+							"    pm.expect(user).to.have.property('endereco');",
+							"    pm.expect(user).to.have.property('email');",
+							"    pm.expect(user).to.have.property('telefone');",
+							"    pm.expect(user).to.have.property('dataCadastro');",
+							"  });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/search?nome=Co&name=Co",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"search"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Co"
+						},
+						{
+							"key": "name",
+							"value": "Co"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET pageable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test the response status code",
+							"pm.test(\"Response status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Test if the content object contains specific values",
+							"pm.test(\"Content object has valid properties\", function () {",
+							"  var content = pm.response.json().content;",
+							"  content.forEach(function(user) {",
+							"    pm.expect(user).to.have.property('id').that.is.a('string').and.not.empty;",
+							"    pm.expect(user).to.have.property('nome').that.is.a('string').and.not.empty;",
+							"    pm.expect(user).to.have.property('cpf').that.is.a('string').and.not.empty;",
+							"    pm.expect(user).to.have.property('endereco').that.is.a('string').and.not.empty;",
+							"    pm.expect(user).to.have.property('email').that.is.a('string').and.not.empty;",
+							"    pm.expect(user).to.have.property('telefone').that.is.a('string').and.not.empty;",
+							"    pm.expect(user).to.have.property('dataCadastro').that.is.a('string').and.not.empty;",
+							"  });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/pageable?size=2&page1=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"pageable"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "page1",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PACTH user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response address is 'Avenida Getulio Vargas'\", function () {",
+							"    pm.expect(pm.response.json().endereco).to.equal(\"Avenida Getulio Vargas\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"endereco\": \"Avenida Getulio Vargas\",\n    \"telefone\": \"12345-9999\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/{{userId}}"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test for response status code",
+							"pm.test(\"Response status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/{{userId}}"
+			},
+			"response": []
+		}
+	]
+}
