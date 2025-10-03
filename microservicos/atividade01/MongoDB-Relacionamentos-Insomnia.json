@@ -1,0 +1,1005 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-10-02T21:50:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_1",
+      "parentId": "fld_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/usuarios",
+      "name": "Listar Usuários",
+      "description": "Lista todos os usuários com seus relacionamentos (perfil e postagens)",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2",
+      "parentId": "fld_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/usuarios",
+      "name": "Criar Usuário",
+      "description": "Cria um novo usuário",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Ana Costa\",\n  \"email\": \"ana.costa@email.com\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3",
+      "parentId": "fld_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/usuarios/usuario1",
+      "name": "Buscar Usuário por ID",
+      "description": "Busca um usuário específico por ID com seus relacionamentos",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4",
+      "parentId": "fld_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/usuarios/usuario1",
+      "name": "Atualizar Usuário",
+      "description": "Atualiza um usuário existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"João Silva Atualizado\",\n  \"email\": \"joao.silva.novo@email.com\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5",
+      "parentId": "fld_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/usuarios/usuario1",
+      "name": "Deletar Usuário",
+      "description": "Deleta um usuário por ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6",
+      "parentId": "fld_2",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/cursos",
+      "name": "Listar Cursos",
+      "description": "Lista todos os cursos com seus estudantes",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7",
+      "parentId": "fld_2",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/cursos",
+      "name": "Criar Curso",
+      "description": "Cria um novo curso",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"React Avançado\",\n  \"descricao\": \"Curso avançado de React com hooks, context e performance\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8",
+      "parentId": "fld_2",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/cursos/curso1",
+      "name": "Buscar Curso por ID",
+      "description": "Busca um curso específico por ID com seus estudantes",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9",
+      "parentId": "fld_2",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/cursos/curso1",
+      "name": "Atualizar Curso",
+      "description": "Atualiza um curso existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Spring Boot Avançado - Atualizado\",\n  \"descricao\": \"Curso atualizado com as últimas versões do Spring Boot e MongoDB\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_10",
+      "parentId": "fld_2",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/cursos/curso1",
+      "name": "Deletar Curso",
+      "description": "Deleta um curso por ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_26",
+      "parentId": "fld_2",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/cursos/com-estudantes",
+      "name": "Criar Curso com Estudantes",
+      "description": "Cria um curso com múltiplos estudantes",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Engenharia de Software\",\n  \"descricao\": \"Curso completo de engenharia de software\",\n  \"estudanteIds\": [\"estudante_id_1\", \"estudante_id_2\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_27",
+      "parentId": "fld_2",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/cursos/{{ _.curso_id }}/estudantes/{{ _.estudante_id }}",
+      "name": "Adicionar Estudante ao Curso",
+      "description": "Adiciona um estudante a um curso existente",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_28",
+      "parentId": "fld_2",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/cursos/{{ _.curso_id }}/estudantes/{{ _.estudante_id }}",
+      "name": "Remover Estudante do Curso",
+      "description": "Remove um estudante de um curso",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_11",
+      "parentId": "fld_3",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/estudantes",
+      "name": "Listar Estudantes",
+      "description": "Lista todos os estudantes com seus cursos",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_12",
+      "parentId": "fld_3",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/estudantes",
+      "name": "Criar Estudante",
+      "description": "Cria um novo estudante",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Lucas Ferreira\",\n  \"matricula\": \"2024004\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_13",
+      "parentId": "fld_3",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/estudantes/estudante1",
+      "name": "Buscar Estudante por ID",
+      "description": "Busca um estudante específico por ID com seus cursos",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_14",
+      "parentId": "fld_3",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/estudantes/estudante1",
+      "name": "Atualizar Estudante",
+      "description": "Atualiza um estudante existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"João Silva Atualizado\",\n  \"matricula\": \"2024001\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_15",
+      "parentId": "fld_3",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/estudantes/estudante1",
+      "name": "Deletar Estudante",
+      "description": "Deleta um estudante por ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_29",
+      "parentId": "fld_3",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/estudantes/com-cursos",
+      "name": "Criar Estudante com Cursos",
+      "description": "Cria um estudante com múltiplos cursos",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Ana Costa\",\n  \"matricula\": \"2024004\",\n  \"cursoIds\": [\"curso_id_1\", \"curso_id_2\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_30",
+      "parentId": "fld_3",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/estudantes/{{ _.estudante_id }}/cursos/{{ _.curso_id }}",
+      "name": "Adicionar Curso ao Estudante",
+      "description": "Adiciona um curso a um estudante existente",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_31",
+      "parentId": "fld_3",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/estudantes/{{ _.estudante_id }}/cursos/{{ _.curso_id }}",
+      "name": "Remover Curso do Estudante",
+      "description": "Remove um curso de um estudante",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_16",
+      "parentId": "fld_4",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/perfis",
+      "name": "Listar Perfis",
+      "description": "Lista todos os perfis",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_17",
+      "parentId": "fld_4",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/perfis",
+      "name": "Criar Perfil",
+      "description": "Cria um novo perfil",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"bio\": \"Desenvolvedor Backend Java\",\n  \"site\": \"https://backend.dev\",\n  \"imagem\": \"https://example.com/backend.jpg\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_18",
+      "parentId": "fld_4",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/perfis/perfil1",
+      "name": "Buscar Perfil por ID",
+      "description": "Busca um perfil específico por ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_19",
+      "parentId": "fld_4",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/perfis/perfil1",
+      "name": "Atualizar Perfil",
+      "description": "Atualiza um perfil existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"bio\": \"Desenvolvedor Java Sênior - Atualizado\",\n  \"site\": \"https://joao.dev/atualizado\",\n  \"imagem\": \"https://example.com/joao-novo.jpg\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_20",
+      "parentId": "fld_4",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/perfis/perfil1",
+      "name": "Deletar Perfil",
+      "description": "Deleta um perfil por ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_21",
+      "parentId": "fld_5",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/postagens",
+      "name": "Listar Postagens",
+      "description": "Lista todas as postagens",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_22",
+      "parentId": "fld_5",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/postagens",
+      "name": "Criar Postagem",
+      "description": "Cria uma nova postagem",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"Teste de API\",\n  \"conteudo\": \"Postagem criada via API para testar relacionamentos\",\n  \"dataCriacao\": \"2025-10-02T21:00:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_23",
+      "parentId": "fld_5",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/postagens/post1",
+      "name": "Buscar Postagem por ID",
+      "description": "Busca uma postagem específica por ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_24",
+      "parentId": "fld_5",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/postagens/post1",
+      "name": "Atualizar Postagem",
+      "description": "Atualiza uma postagem existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"Aprendendo MongoDB com Spring Boot - Atualizado\",\n  \"conteudo\": \"Hoje aprendi sobre relacionamentos em MongoDB usando @DBRef no Spring Boot. É muito interessante como podemos criar referências entre documentos! Atualizado com novas informações.\",\n  \"dataCriacao\": \"2025-10-02T10:30:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_25",
+      "parentId": "fld_5",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "url": "{{ _.base_url }}/postagens/post1",
+      "name": "Deletar Postagem",
+      "description": "Deleta uma postagem por ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1733175000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_1",
+      "parentId": "wrk_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "name": "👤 Usuários",
+      "description": "Endpoints para gerenciar usuários e seus relacionamentos",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1733175000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_2",
+      "parentId": "wrk_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "name": "🎓 Cursos",
+      "description": "Endpoints para gerenciar cursos e seus estudantes",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1733175000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_3",
+      "parentId": "wrk_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "name": "🎒 Estudantes",
+      "description": "Endpoints para gerenciar estudantes e seus cursos",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1733175000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_4",
+      "parentId": "wrk_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "name": "👤 Perfis",
+      "description": "Endpoints para gerenciar perfis de usuários",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1733175000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_5",
+      "parentId": "wrk_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "name": "📝 Postagens",
+      "description": "Endpoints para gerenciar postagens dos usuários",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1733175000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_1",
+      "parentId": null,
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "name": "MongoDB Relacionamentos API",
+      "description": "Collection para testar a API de relacionamentos MongoDB com Spring Boot",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_1",
+      "parentId": "wrk_1",
+      "modified": 1733175000000,
+      "created": 1733175000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080",
+        "curso_id": "curso_id_exemplo",
+        "estudante_id": "estudante_id_exemplo"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "curso_id",
+          "estudante_id"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1733175000000,
+      "_type": "environment"
+    }
+  ]
+}
