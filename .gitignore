@@ -1,0 +1,457 @@
+# ===========================================
+# GITIGNORE PARA REPOSITÓRIO DE ANOTAÇÕES
+# ===========================================
+
+# ===========================================
+# ARQUIVOS DE SISTEMA E EDITORES
+# ===========================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.atom/
+.brackets.json
+
+# ===========================================
+# JAVA / MAVEN
+# ===========================================
+
+# Arquivos compilados
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ===========================================
+# JAVASCRIPT / NODE.JS
+# ===========================================
+
+# Dependências
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static
+
+# Temporary folders
+tmp/
+temp/
+
+# ===========================================
+# REACT NATIVE
+# ===========================================
+
+# React Native
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Metro
+.metro-health-check*
+
+# ===========================================
+# PYTHON
+# ===========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ===========================================
+# DOCKER
+# ===========================================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# ===========================================
+# BANCOS DE DADOS
+# ===========================================
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs de aplicação
+*.log
+logs/
+log/
+
+# ===========================================
+# ARQUIVOS DE BACKUP E TEMPORÁRIOS
+# ===========================================
+
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.tmp
+*.temp
+
+# Arquivos compactados (exceto se forem importantes)
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.gz
+*.bz2
+
+# ===========================================
+# ARQUIVOS DE CONFIGURAÇÃO SENSÍVEIS
+# ===========================================
+
+# Chaves e certificados
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Configurações locais
+config.local.*
+*.local.*
+
+# ===========================================
+# ARQUIVOS DE TESTE E DOCUMENTAÇÃO TEMPORÁRIA
+# ===========================================
+
+# Arquivos de teste temporários
+test-*
+*test-temp*
+*_test_temp*
+
+# Documentação temporária
+*.draft
+*.temp.md
+notes-temp/
+
+# ===========================================
+# ARQUIVOS ESPECÍFICOS DO PROJETO
+# ===========================================
+
+# Arquivos de log específicos
+app.log
+application.log
+error.log
+access.log
+
+# Arquivos de configuração de IDEs específicos
+*.iml
+*.ipr
+*.iws
+
+# Arquivos de build específicos
+build/
+dist/
+out/
+
+# Arquivos de cache específicos
+.cache/
+cache/
+
+# ===========================================
+# EXCEÇÕES (arquivos que devem ser incluídos)
+# ===========================================
+
+# Incluir arquivos importantes mesmo que sejam .zip
+!**/important-*.zip
+!**/submission-*.zip
+
+# Incluir READMEs mesmo em diretórios ignorados
+!**/README.md
+!**/readme.md
+!**/README.txt
+!**/readme.txt
+
+# Incluir arquivos de configuração importantes
+!**/package.json
+!**/pom.xml
+!**/requirements.txt
+!**/Dockerfile
+!**/docker-compose.yml
+!**/docker-compose.yaml
