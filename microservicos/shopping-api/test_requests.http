@@ -1,0 +1,87 @@
+### Shopping API - Test Requests
+### Execute these requests after starting the application on port 8083
+
+### 1. Create a new shop order
+POST http://localhost:8083/shopping
+Content-Type: application/json
+
+{
+  "userIdentifier": "user123",
+  "date": "2024-01-15T10:30:00",
+  "items": [
+    {
+      "productIdentifier": "prod001",
+      "price": 29.99,
+      "quantity": 2
+    },
+    {
+      "productIdentifier": "prod002",
+      "price": 15.50,
+      "quantity": 1
+    }
+  ],
+  "total": 75.48
+}
+
+### 2. Create another shop order
+POST http://localhost:8083/shopping
+Content-Type: application/json
+
+{
+  "userIdentifier": "user456",
+  "date": "2024-01-16T14:20:00",
+  "items": [
+    {
+      "productIdentifier": "prod001",
+      "price": 32.00,
+      "quantity": 1
+    }
+  ],
+  "total": 32.00
+}
+
+### 3. Get all shops
+GET http://localhost:8083/shopping
+
+### 4. Get shop by ID (replace with actual ID from previous response)
+GET http://localhost:8083/shopping/{{shopId}}
+
+### 5. Get shops by user
+GET http://localhost:8083/shopping/shopByUser?userId=user123
+
+### 6. Get shops by date range
+GET http://localhost:8083/shopping/shopByDate?dataInicio=2024-01-01&dataFim=2024-01-31
+
+### 7. Get shops by product identifier
+GET http://localhost:8083/shopping/prod001
+
+### 8. Get shops with advanced filters (with minimum value)
+GET http://localhost:8083/shopping/search?dataInicio=2024-01-01&dataFim=2024-01-31&valorMinimo=50.0
+
+### 9. Get shops with advanced filters (without minimum value)
+GET http://localhost:8083/shopping/search?dataInicio=2024-01-01&dataFim=2024-01-31
+
+### 10. Get sales report by date
+GET http://localhost:8083/shopping/report?dataInicio=2024-01-01&dataFim=2024-01-31
+
+### 11. Test validation - Invalid shop (missing required fields)
+POST http://localhost:8083/shopping
+Content-Type: application/json
+
+{
+  "userIdentifier": "",
+  "date": "2024-01-15T10:30:00",
+  "items": [
+    {
+      "productIdentifier": "prod001",
+      "price": -10.0,
+      "quantity": 0
+    }
+  ]
+}
+
+### 12. Test date parsing with different formats
+GET http://localhost:8083/shopping/shopByDate?dataInicio=2024-01-15&dataFim=2024-01-16
+
+### 13. Test date parsing with datetime format
+GET http://localhost:8083/shopping/shopByDate?dataInicio=2024-01-15T00:00:00&dataFim=2024-01-16T23:59:59

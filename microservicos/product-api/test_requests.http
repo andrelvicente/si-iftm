@@ -1,0 +1,104 @@
+### Teste da Product API
+### Execute estas requisições após iniciar a aplicação
+
+### 1. Criar uma categoria
+POST http://localhost:8080/category
+Content-Type: application/json
+
+{
+  "nome": "Eletrônicos"
+}
+
+### 2. Criar outra categoria
+POST http://localhost:8080/category
+Content-Type: application/json
+
+{
+  "nome": "Roupas"
+}
+
+### 3. Listar todas as categorias
+GET http://localhost:8080/category
+
+### 4. Buscar categoria por ID (substitua {id} pelo ID retornado na criação)
+GET http://localhost:8080/category/{id}
+
+### 5. Listar categorias paginadas
+GET http://localhost:8080/category/pageable?page=0&size=5
+
+### 6. Atualizar categoria (substitua {id} pelo ID da categoria)
+PUT http://localhost:8080/category/{id}
+Content-Type: application/json
+
+{
+  "nome": "Eletrônicos e Informática"
+}
+
+### 7. Criar um produto (substitua {categoryId} pelo ID da categoria)
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "productIdentifier": "PROD001",
+  "nome": "Smartphone Samsung Galaxy S23",
+  "descricao": "Smartphone Samsung Galaxy S23 com 128GB de armazenamento, tela de 6.1 polegadas e câmera de 50MP",
+  "preco": 2500.00,
+  "categoryId": "{categoryId}"
+}
+
+### 8. Criar outro produto
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "productIdentifier": "PROD002",
+  "nome": "Notebook Dell Inspiron",
+  "descricao": "Notebook Dell Inspiron 15 com Intel i5, 8GB RAM, 256GB SSD",
+  "preco": 3200.00,
+  "categoryId": "{categoryId}"
+}
+
+### 9. Listar todos os produtos
+GET http://localhost:8080/product
+
+### 10. Buscar produto por ID (substitua {id} pelo ID do produto)
+GET http://localhost:8080/product/{id}
+
+### 11. Buscar produto por identificador
+GET http://localhost:8080/product/identifier/PROD001
+
+### 12. Buscar produtos por categoria (substitua {categoryId} pelo ID da categoria)
+GET http://localhost:8080/product/category/{categoryId}
+
+### 13. Listar produtos paginados
+GET http://localhost:8080/product/pageable?page=0&size=5
+
+### 14. Atualizar produto (substitua {id} pelo ID do produto)
+PUT http://localhost:8080/product/{id}
+Content-Type: application/json
+
+{
+  "productIdentifier": "PROD001",
+  "nome": "Smartphone Samsung Galaxy S23 Plus",
+  "descricao": "Smartphone Samsung Galaxy S23 Plus com 256GB de armazenamento, tela de 6.6 polegadas e câmera de 50MP",
+  "preco": 2800.00,
+  "categoryId": "{categoryId}"
+}
+
+### 15. Teste de validação - Produto com dados inválidos
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "productIdentifier": "AB",
+  "nome": "X",
+  "descricao": "Curta",
+  "preco": -100.00,
+  "categoryId": "categoria-inexistente"
+}
+
+### 16. Excluir produto (substitua {id} pelo ID do produto)
+DELETE http://localhost:8080/product/{id}
+
+### 17. Excluir categoria (substitua {id} pelo ID da categoria)
+DELETE http://localhost:8080/category/{id}
