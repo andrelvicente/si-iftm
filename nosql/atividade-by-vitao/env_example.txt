@@ -1,0 +1,8 @@
+# Configurações do MongoDB
+MONGODB_URI=mongodb://localhost:27017/
+DATABASE_NAME=rastreamento_entregas
+COLLECTION_NAME=localizacoes
+
+# Configurações opcionais
+# MONGODB_URI=mongodb://usuario:senha@localhost:27017/
+# MONGODB_URI=mongodb+srv://usuario:senha@cluster.mongodb.net/

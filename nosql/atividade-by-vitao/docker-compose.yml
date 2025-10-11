@@ -1,0 +1,58 @@
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: rastreamento_mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: rastreamento123
+      MONGO_INITDB_DATABASE: rastreamento_entregas
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d
+    networks:
+      - rastreamento_network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Sistema de Rastreamento
+  rastreamento:
+    build: .
+    container_name: rastreamento_app
+    restart: unless-stopped
+    environment:
+      MONGODB_URI: mongodb://admin:rastreamento123@mongodb:27017/rastreamento_entregas?authSource=admin
+      DATABASE_NAME: rastreamento_entregas
+      COLLECTION_NAME: localizacoes
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    volumes:
+      - .:/home/andre-luiz/iftm/si-iftm/nosql/atividade-by-vitao
+      - ./logs:/app/logs
+    networks:
+      - rastreamento_network
+    stdin_open: true
+    tty: true
+    command: >
+      sh -c "
+        echo '🚀 Aguardando MongoDB ficar pronto...' &&
+        sleep 10 &&
+        echo '✅ Iniciando Sistema de Rastreamento Simplificado...' &&
+        python app_simples.py
+      "
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  rastreamento_network:
+    driver: bridge

@@ -1,0 +1,1205 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26718176645501,
+          -18.917542242820467
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:49:04.750000",
+        "velocidade": 38.55,
+        "progresso_rota": 0.0,
+        "metadados": {
+          "ponto_sequencial": 1,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.266906445560664,
+          -18.9176044715411
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:49:34.750000",
+        "velocidade": 16.48,
+        "progresso_rota": 2.04,
+        "metadados": {
+          "ponto_sequencial": 2,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.266688045407584,
+          -18.917671531453095
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:50:04.750000",
+        "velocidade": 39.7,
+        "progresso_rota": 4.08,
+        "metadados": {
+          "ponto_sequencial": 3,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26626592650845,
+          -18.917653765139892
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:50:34.750000",
+        "velocidade": 10.15,
+        "progresso_rota": 6.12,
+        "metadados": {
+          "ponto_sequencial": 4,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.266058231263855,
+          -18.9178781014246
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:51:04.750000",
+        "velocidade": 20.44,
+        "progresso_rota": 8.16,
+        "metadados": {
+          "ponto_sequencial": 5,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.2657173236847,
+          -18.91789238159674
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:51:34.750000",
+        "velocidade": 18.38,
+        "progresso_rota": 10.2,
+        "metadados": {
+          "ponto_sequencial": 6,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.265431321296354,
+          -18.917808417681748
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:52:04.750000",
+        "velocidade": 34.07,
+        "progresso_rota": 12.24,
+        "metadados": {
+          "ponto_sequencial": 7,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.264981525318184,
+          -18.91792500851716
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:52:34.750000",
+        "velocidade": 23.53,
+        "progresso_rota": 14.29,
+        "metadados": {
+          "ponto_sequencial": 8,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.264724600630274,
+          -18.91792031674714
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:53:04.750000",
+        "velocidade": 34.52,
+        "progresso_rota": 16.33,
+        "metadados": {
+          "ponto_sequencial": 9,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26455212971432,
+          -18.918094652185864
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:53:34.750000",
+        "velocidade": 21.65,
+        "progresso_rota": 18.37,
+        "metadados": {
+          "ponto_sequencial": 10,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.264204128709224,
+          -18.91814091830714
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:54:04.750000",
+        "velocidade": 22.09,
+        "progresso_rota": 20.41,
+        "metadados": {
+          "ponto_sequencial": 11,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26389666462829,
+          -18.91817963974177
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:54:34.750000",
+        "velocidade": 24.08,
+        "progresso_rota": 22.45,
+        "metadados": {
+          "ponto_sequencial": 12,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26358713873119,
+          -18.918140554122985
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:55:04.750000",
+        "velocidade": 35.64,
+        "progresso_rota": 24.49,
+        "metadados": {
+          "ponto_sequencial": 13,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.263270143359875,
+          -18.918306614945255
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:55:34.750000",
+        "velocidade": 37.12,
+        "progresso_rota": 26.53,
+        "metadados": {
+          "ponto_sequencial": 14,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.263013514039756,
+          -18.918325081766795
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:56:04.750000",
+        "velocidade": 21.69,
+        "progresso_rota": 28.57,
+        "metadados": {
+          "ponto_sequencial": 15,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26268092173888,
+          -18.918440791200776
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:56:34.750000",
+        "velocidade": 26.51,
+        "progresso_rota": 30.61,
+        "metadados": {
+          "ponto_sequencial": 16,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.262418817045585,
+          -18.918472564394516
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:57:04.750000",
+        "velocidade": 49.71,
+        "progresso_rota": 32.65,
+        "metadados": {
+          "ponto_sequencial": 17,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.262073840097464,
+          -18.918543501508008
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:57:34.750000",
+        "velocidade": 39.97,
+        "progresso_rota": 34.69,
+        "metadados": {
+          "ponto_sequencial": 18,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26167095180324,
+          -18.91848944748015
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:58:04.750000",
+        "velocidade": 24.41,
+        "progresso_rota": 36.73,
+        "metadados": {
+          "ponto_sequencial": 19,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26137359833589,
+          -18.918532342618217
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:58:34.750000",
+        "velocidade": 48.01,
+        "progresso_rota": 38.78,
+        "metadados": {
+          "ponto_sequencial": 20,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.261057408694036,
+          -18.918639654274344
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:59:04.750000",
+        "velocidade": 42.66,
+        "progresso_rota": 40.82,
+        "metadados": {
+          "ponto_sequencial": 21,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.26079303064574,
+          -18.91875071504277
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T22:59:34.751000",
+        "velocidade": 26.11,
+        "progresso_rota": 42.86,
+        "metadados": {
+          "ponto_sequencial": 22,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.260460349570145,
+          -18.918669579926984
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:00:04.751000",
+        "velocidade": 44.04,
+        "progresso_rota": 44.9,
+        "metadados": {
+          "ponto_sequencial": 23,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.260163200183115,
+          -18.918692340297962
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:00:34.751000",
+        "velocidade": 23.97,
+        "progresso_rota": 46.94,
+        "metadados": {
+          "ponto_sequencial": 24,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25996561811004,
+          -18.918756022823302
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:01:04.751000",
+        "velocidade": 49.57,
+        "progresso_rota": 48.98,
+        "metadados": {
+          "ponto_sequencial": 25,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.259634208861314,
+          -18.918868666537737
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:01:34.751000",
+        "velocidade": 36.65,
+        "progresso_rota": 51.02,
+        "metadados": {
+          "ponto_sequencial": 26,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.259300481025285,
+          -18.91888271771718
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:02:04.751000",
+        "velocidade": 47.48,
+        "progresso_rota": 53.06,
+        "metadados": {
+          "ponto_sequencial": 27,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.258911833455784,
+          -18.91896190774155
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:02:34.751000",
+        "velocidade": 44.94,
+        "progresso_rota": 55.1,
+        "metadados": {
+          "ponto_sequencial": 28,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.2587113135481,
+          -18.918963018293635
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:03:04.751000",
+        "velocidade": 37.64,
+        "progresso_rota": 57.14,
+        "metadados": {
+          "ponto_sequencial": 29,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25836042017387,
+          -18.91901213418315
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:03:34.751000",
+        "velocidade": 39.8,
+        "progresso_rota": 59.18,
+        "metadados": {
+          "ponto_sequencial": 30,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25802544775206,
+          -18.91914618631725
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:04:04.751000",
+        "velocidade": 21.98,
+        "progresso_rota": 61.22,
+        "metadados": {
+          "ponto_sequencial": 31,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25770197739778,
+          -18.919106777417642
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:04:34.751000",
+        "velocidade": 44.56,
+        "progresso_rota": 63.27,
+        "metadados": {
+          "ponto_sequencial": 32,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.257401146621746,
+          -18.919226346325843
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:05:04.751000",
+        "velocidade": 31.4,
+        "progresso_rota": 65.31,
+        "metadados": {
+          "ponto_sequencial": 33,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25711090579184,
+          -18.919311655678268
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:05:34.751000",
+        "velocidade": 34.8,
+        "progresso_rota": 67.35,
+        "metadados": {
+          "ponto_sequencial": 34,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25685356618238,
+          -18.9193323181508
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:06:04.751000",
+        "velocidade": 27.6,
+        "progresso_rota": 69.39,
+        "metadados": {
+          "ponto_sequencial": 35,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25651781808785,
+          -18.919302546013427
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:06:34.751000",
+        "velocidade": 49.95,
+        "progresso_rota": 71.43,
+        "metadados": {
+          "ponto_sequencial": 36,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.2562005976726,
+          -18.91942764840108
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:07:04.751000",
+        "velocidade": 40.27,
+        "progresso_rota": 73.47,
+        "metadados": {
+          "ponto_sequencial": 37,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25588181486893,
+          -18.919467656723246
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:07:34.751000",
+        "velocidade": 22.26,
+        "progresso_rota": 75.51,
+        "metadados": {
+          "ponto_sequencial": 38,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25559153672771,
+          -18.919549154087214
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:08:04.751000",
+        "velocidade": 24.61,
+        "progresso_rota": 77.55,
+        "metadados": {
+          "ponto_sequencial": 39,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.255392243149444,
+          -18.919528603680327
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:08:34.751000",
+        "velocidade": 48.74,
+        "progresso_rota": 79.59,
+        "metadados": {
+          "ponto_sequencial": 40,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25498971970809,
+          -18.91965730446613
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:09:04.751000",
+        "velocidade": 39.97,
+        "progresso_rota": 81.63,
+        "metadados": {
+          "ponto_sequencial": 41,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.2547827188601,
+          -18.919615399112143
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:09:34.751000",
+        "velocidade": 17.23,
+        "progresso_rota": 83.67,
+        "metadados": {
+          "ponto_sequencial": 42,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25450772361785,
+          -18.91978582211425
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:10:04.751000",
+        "velocidade": 21.51,
+        "progresso_rota": 85.71,
+        "metadados": {
+          "ponto_sequencial": 43,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25420203283551,
+          -18.91974429556775
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:10:34.751000",
+        "velocidade": 28.18,
+        "progresso_rota": 87.76,
+        "metadados": {
+          "ponto_sequencial": 44,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25376517745952,
+          -18.919841027980866
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:11:04.751000",
+        "velocidade": 38.47,
+        "progresso_rota": 89.8,
+        "metadados": {
+          "ponto_sequencial": 45,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25349316526696,
+          -18.919843530228025
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:11:34.751000",
+        "velocidade": 31.03,
+        "progresso_rota": 91.84,
+        "metadados": {
+          "ponto_sequencial": 46,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25312162638168,
+          -18.919930811253714
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:12:04.751000",
+        "velocidade": 34.63,
+        "progresso_rota": 93.88,
+        "metadados": {
+          "ponto_sequencial": 47,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.252977557590185,
+          -18.920003294934315
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:12:34.751000",
+        "velocidade": 22.86,
+        "progresso_rota": 95.92,
+        "metadados": {
+          "ponto_sequencial": 48,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.25264100454049,
+          -18.920100142825586
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:13:04.751000",
+        "velocidade": 32.97,
+        "progresso_rota": 97.96,
+        "metadados": {
+          "ponto_sequencial": 49,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -48.252270513402166,
+          -18.920155647677742
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "usuario": "vitao",
+        "timestamp": "2025-10-10T23:13:34.751000",
+        "velocidade": 24.86,
+        "progresso_rota": 100.0,
+        "metadados": {
+          "ponto_sequencial": 50,
+          "total_pontos": 50,
+          "rua": "Av. João Naves de Ávila",
+          "cidade": "Uberlândia",
+          "estado": "MG"
+        }
+      }
+    }
+  ]
+}
