@@ -95,6 +95,54 @@ class DatabaseManager:
         except Exception as e:
             logger.error(f"Erro ao limpar coleção: {e}")
             return 0
+    
+    def get_collection_stats(self):
+        """Retorna estatísticas da coleção"""
+        try:
+            total_docs = self.collection.count_documents({})
+            usuarios = self.collection.distinct("usuario")
+            sessoes = self.collection.distinct("sessao_id")
+            
+            # Estatísticas por usuário
+            stats_por_usuario = []
+            for usuario in usuarios:
+                count = self.collection.count_documents({"usuario": usuario})
+                stats_por_usuario.append({"usuario": usuario, "total_pontos": count})
+            
+            # Estatísticas por sessão
+            stats_por_sessao = []
+            for sessao in sessoes:
+                count = self.collection.count_documents({"sessao_id": sessao})
+                # Pega o primeiro documento da sessão para obter timestamp
+                primeiro_doc = self.collection.find_one({"sessao_id": sessao}, sort=[("timestamp", 1)])
+                timestamp_sessao = primeiro_doc.get("timestamp") if primeiro_doc else None
+                stats_por_sessao.append({
+                    "sessao_id": sessao, 
+                    "total_pontos": count,
+                    "timestamp": timestamp_sessao
+                })
+            
+            return {
+                "total_documentos": total_docs,
+                "total_usuarios": len(usuarios),
+                "total_sessoes": len(sessoes),
+                "usuarios": usuarios,
+                "stats_por_usuario": stats_por_usuario,
+                "stats_por_sessao": stats_por_sessao
+            }
+        except Exception as e:
+            logger.error(f"Erro ao obter estatísticas: {e}")
+            return None
+    
+    def get_locations_by_session(self, sessao_id):
+        """Recupera todas as localizações de uma sessão específica"""
+        try:
+            locations = list(self.collection.find({"sessao_id": sessao_id}).sort("timestamp", 1))
+            logger.info(f"Recuperadas {len(locations)} localizações para sessão: {sessao_id}")
+            return locations
+        except Exception as e:
+            logger.error(f"Erro ao recuperar localizações da sessão: {e}")
+            return []
 
 # Instância global do gerenciador de banco
 db_manager = DatabaseManager()

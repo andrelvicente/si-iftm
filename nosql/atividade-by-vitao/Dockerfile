@@ -19,10 +19,12 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copia código da aplicação
 COPY . .
 
+# Garante que todos os arquivos Python estão presentes
+COPY *.py /app/
+
 # Cria usuário não-root para segurança
 RUN useradd --create-home --shell /bin/bash app && \
-    chown -R app:app /app && \
-    chown -R app:app /home/andre-luiz/iftm/si-iftm/nosql/atividade-by-vitao
+    chown -R app:app /app
 USER app
 
 # Expõe porta (opcional, para futuras extensões web)

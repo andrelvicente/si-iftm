@@ -1,0 +1,8 @@
+id_cliente,idade,genero,escolaridade,renda_mensal,avaliacao,cidade,faixa_idade,escolaridade_nivel
+1,35,Feminino,Superior,5200.0,4,Uberlândia,26-35,3
+4,55,Masculino,Superior,12000.0,3,Patos de Minas,51+,3
+6,45,Não-binário,Superior,6500.0,4,Uberlândia,36-50,3
+7,33,Masculino,Fundamental,2100.0,4,Araguari,26-35,1
+8,68,Feminino,Médio,3200.0,2,Uberlândia,51+,2
+11,41,Masculino,Doutorado,18000.0,5,Uberlândia,36-50,5
+12,29,Feminino,Superior,5600.0,4,Uberaba,26-35,3

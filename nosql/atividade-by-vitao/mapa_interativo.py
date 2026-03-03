@@ -62,75 +62,102 @@ class MapaInterativo:
         ).add_to(self.mapa)
     
     def adicionar_trajeto_completo(self, localizacoes: List[Dict[str, Any]]):
-        """Adiciona linha do trajeto completo"""
+        """Adiciona linhas do trajeto completo, uma para cada sessão"""
         if not localizacoes:
             return
         
-        # Extrai coordenadas das localizações
-        coordenadas = []
+        # Agrupa localizações por sessão
+        sessoes = {}
         for loc in localizacoes:
-            coords = loc['localizacao']['coordinates']
-            coordenadas.append([coords[1], coords[0]])  # [lat, lon] para Folium
+            sessao_id = loc.get('sessao_id', 'sem_sessao')
+            if sessao_id not in sessoes:
+                sessoes[sessao_id] = []
+            sessoes[sessao_id].append(loc)
         
-        # Adiciona linha do trajeto
-        folium.PolyLine(
-            locations=coordenadas,
-            color='blue',
-            weight=3,
-            opacity=0.7,
-            popup="Trajeto completo do motoboy"
-        ).add_to(self.mapa)
+        # Cores diferentes para cada sessão
+        cores_sessao = ['blue', 'red', 'green', 'purple', 'orange', 'darkred', 
+                       'lightred', 'beige', 'darkblue', 'darkgreen', 'cadetblue', 
+                       'darkpurple', 'white', 'pink', 'lightblue', 'lightgreen', 
+                       'gray', 'black', 'lightgray']
+        
+        for idx, (sessao_id, locs_sessao) in enumerate(sessoes.items()):
+            cor_sessao = cores_sessao[idx % len(cores_sessao)]
+            
+            # Extrai coordenadas das localizações da sessão
+            coordenadas = []
+            for loc in sorted(locs_sessao, key=lambda x: x['timestamp']):
+                coords = loc['localizacao']['coordinates']
+                coordenadas.append([coords[1], coords[0]])  # [lat, lon] para Folium
+            
+            # Adiciona linha do trajeto da sessão
+            folium.PolyLine(
+                locations=coordenadas,
+                color=cor_sessao,
+                weight=3,
+                opacity=0.7,
+                popup=f"Trajeto da sessão {sessao_id}"
+            ).add_to(self.mapa)
     
     def adicionar_pontos_sequenciais(self, localizacoes: List[Dict[str, Any]], 
                                    mostrar_todos: bool = False):
-        """Adiciona pontos sequenciais do motoboy"""
+        """Adiciona pontos sequenciais do motoboy com cores diferentes por sessão"""
         if not localizacoes:
             return
         
-        # Se mostrar_todos=False, mostra apenas pontos em intervalos
-        pontos_para_mostrar = localizacoes
-        if not mostrar_todos and len(localizacoes) > 20:
-            # Mostra apenas a cada 5 pontos para não sobrecarregar o mapa
-            pontos_para_mostrar = localizacoes[::5]
+        # Agrupa localizações por sessão
+        sessoes = {}
+        for loc in localizacoes:
+            sessao_id = loc.get('sessao_id', 'sem_sessao')
+            if sessao_id not in sessoes:
+                sessoes[sessao_id] = []
+            sessoes[sessao_id].append(loc)
         
-        for i, loc in enumerate(pontos_para_mostrar):
-            coords = loc['localizacao']['coordinates']
-            timestamp = loc['timestamp']
-            velocidade = loc.get('velocidade', 0)
-            progresso = loc.get('progresso_rota', 0)
+        # Cores diferentes para cada sessão
+        cores_sessao = ['blue', 'red', 'green', 'purple', 'orange', 'darkred', 
+                       'lightred', 'beige', 'darkblue', 'darkgreen', 'cadetblue', 
+                       'darkpurple', 'white', 'pink', 'lightblue', 'lightgreen', 
+                       'gray', 'black', 'lightgray']
+        
+        for idx, (sessao_id, locs_sessao) in enumerate(sessoes.items()):
+            cor_sessao = cores_sessao[idx % len(cores_sessao)]
             
-            # Cor baseada na velocidade
-            if velocidade < 20:
-                cor = 'orange'
-            elif velocidade < 40:
-                cor = 'blue'
-            else:
-                cor = 'green'
+            # Se mostrar_todos=False, mostra apenas pontos em intervalos
+            pontos_para_mostrar = locs_sessao
+            if not mostrar_todos and len(locs_sessao) > 20:
+                # Mostra apenas a cada 5 pontos para não sobrecarregar o mapa
+                pontos_para_mostrar = locs_sessao[::5]
             
-            # Popup com informações detalhadas
-            popup_html = f"""
-            <div style="width: 200px;">
-                <h4>📍 Posição {i+1}</h4>
-                <p><b>Usuário:</b> {loc['usuario']}</p>
-                <p><b>Data/Hora:</b> {timestamp.strftime('%d/%m/%Y %H:%M:%S')}</p>
-                <p><b>Velocidade:</b> {velocidade} km/h</p>
-                <p><b>Progresso:</b> {progresso}%</p>
-                <p><b>Coordenadas:</b><br>
-                   Lat: {coords[1]:.6f}<br>
-                   Lon: {coords[0]:.6f}</p>
-            </div>
-            """
-            
-            folium.CircleMarker(
-                location=[coords[1], coords[0]],
-                radius=6,
-                popup=folium.Popup(popup_html, max_width=250),
-                tooltip=f"Posição {i+1} - {velocidade} km/h",
-                color='white',
-                weight=2,
-                fillColor=cor,
-                fillOpacity=0.8
-            ).add_to(self.mapa)
+            for i, loc in enumerate(pontos_para_mostrar):
+                coords = loc['localizacao']['coordinates']
+                timestamp = loc['timestamp']
+                velocidade = loc.get('velocidade', 0)
+                progresso = loc.get('progresso_rota', 0)
+                
+                # Popup com informações detalhadas
+                popup_html = f"""
+                <div style="width: 200px;">
+                    <h4>📍 Posição {i+1}</h4>
+                    <p><b>Usuário:</b> {loc['usuario']}</p>
+                    <p><b>Sessão:</b> {sessao_id}</p>
+                    <p><b>Data/Hora:</b> {timestamp.strftime('%d/%m/%Y %H:%M:%S')}</p>
+                    <p><b>Velocidade:</b> {velocidade} km/h</p>
+                    <p><b>Progresso:</b> {progresso}%</p>
+                    <p><b>Coordenadas:</b><br>
+                       Lat: {coords[1]:.6f}<br>
+                       Lon: {coords[0]:.6f}</p>
+                </div>
+                """
+                
+                folium.CircleMarker(
+                    location=[coords[1], coords[0]],
+                    radius=6,
+                    popup=folium.Popup(popup_html, max_width=250),
+                    tooltip=f"Sessão {sessao_id} - Posição {i+1} - {velocidade} km/h",
+                    color='white',
+                    weight=2,
+                    fillColor=cor_sessao,
+                    fillOpacity=0.8
+                ).add_to(self.mapa)
     
     def adicionar_marcador_atual(self, localizacao_atual: Dict[str, Any]):
         """Adiciona marcador da posição atual do motoboy"""
@@ -288,7 +315,7 @@ class MapaInterativo:
         """Adiciona legenda ao mapa"""
         legenda_html = """
         <div style="position: fixed; 
-                    bottom: 50px; left: 50px; width: 200px; height: 120px; 
+                    bottom: 50px; left: 50px; width: 220px; height: 160px; 
                     background-color: white; border:2px solid grey; z-index:9999; 
                     font-size:14px; padding: 10px">
         <h4>Legenda</h4>
@@ -296,6 +323,8 @@ class MapaInterativo:
         <p><i class="fa fa-stop" style="color:red"></i> Fim da rota</p>
         <p><i class="fa fa-motorcycle" style="color:red"></i> Posição atual</p>
         <p><span style="color:blue">●</span> Pontos do trajeto</p>
+        <p><span style="color:blue">━</span> Linhas por sessão</p>
+        <p><small>Cada cor representa uma sessão diferente</small></p>
         </div>
         """
         self.mapa.get_root().html.add_child(folium.Element(legenda_html))

@@ -22,8 +22,8 @@ ROUTE_CONFIG = {
     },
     'fim': {
         'nome': 'Center Shopping',
-        'latitude': -18.9201,
-        'longitude': -48.2523
+        'latitude': -18.890546,
+        'longitude': -48.256541
     }
 }
 

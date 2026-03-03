@@ -4,6 +4,7 @@ Gera dados simulados de um motoboy se deslocando pela Av. João Naves de Ávila
 """
 import random
 import math
+import uuid
 from datetime import datetime, timedelta
 from typing import List, Dict, Any
 from config import ROUTE_CONFIG, SIMULATION_CONFIG
@@ -14,6 +15,7 @@ class SimuladorRastreamento:
     
     def __init__(self, usuario: str = "motoboy_001"):
         self.usuario = usuario
+        self.sessao_id = str(uuid.uuid4())[:8]  # ID único para esta sessão
         self.pontos_rota = []
         self._gerar_pontos_rota()
     
@@ -60,7 +62,8 @@ class SimuladorRastreamento:
     
     def _gerar_timestamp(self, ponto_atual: int) -> datetime:
         """Gera timestamp sequencial para cada ponto"""
-        tempo_inicial = datetime.now() - timedelta(hours=1)  # Simula 1 hora atrás
+        # Usa timestamp atual como base para evitar conflitos
+        tempo_inicial = datetime.now() - timedelta(minutes=30)  # Simula 30 minutos atrás
         intervalo = timedelta(seconds=SIMULATION_CONFIG['intervalo_segundos'])
         return tempo_inicial + (intervalo * ponto_atual)
     
@@ -72,6 +75,7 @@ class SimuladorRastreamento:
             # Estrutura do documento MongoDB com GeoJSON
             documento = {
                 "usuario": self.usuario,
+                "sessao_id": self.sessao_id,  # ID único da sessão
                 "timestamp": self._gerar_timestamp(i),
                 "localizacao": {
                     "type": "Point",
@@ -84,7 +88,8 @@ class SimuladorRastreamento:
                     "total_pontos": len(self.pontos_rota),
                     "rua": "Av. João Naves de Ávila",
                     "cidade": "Uberlândia",
-                    "estado": "MG"
+                    "estado": "MG",
+                    "sessao_timestamp": datetime.now().isoformat()
                 }
             }
             dados.append(documento)
@@ -98,12 +103,6 @@ class SimuladorRastreamento:
             return False
         
         try:
-            # Limpa dados anteriores
-            db_manager.clear_collection()
-            
-            # Cria índice geoespacial
-            db_manager.create_geospatial_index()
-            
             # Gera e insere dados
             dados = self.gerar_dados_simulados()
             inseridos = 0
@@ -114,6 +113,7 @@ class SimuladorRastreamento:
             
             print(f"✅ {inseridos} localizações inseridas com sucesso!")
             print(f"📊 Usuário: {self.usuario}")
+            print(f"🆔 Sessão ID: {self.sessao_id}")
             print(f"🗺️  Rota: {ROUTE_CONFIG['inicio']['nome']} → {ROUTE_CONFIG['fim']['nome']}")
             print(f"📍 Total de pontos: {len(dados)}")
             
