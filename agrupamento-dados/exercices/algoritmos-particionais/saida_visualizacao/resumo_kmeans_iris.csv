@@ -1,0 +1,5 @@
+cenario,k,distribuicao,silhouette
+Sem normalizacao,3,"{0: 62, 1: 50, 2: 38}",0.5528
+Com normalizacao,3,"{0: 50, 1: 61, 2: 39}",0.5048
+Com normalizacao,2,"{0: 100, 1: 50}",0.63
+Com normalizacao,4,"{0: 50, 1: 29, 2: 29, 3: 42}",0.4451
