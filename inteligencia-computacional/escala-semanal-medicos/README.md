@@ -41,10 +41,8 @@ Projeto em Python para resolver o problema do PDF "ATIVIDADE DE AG":
 
 O app mostra:
 - penalidades finais por criterio
-- grafico de evolucao da aptidao
 - tabela completa da escala semanal
 - tabela de carga horaria por medico
-- grafico de barras de horas por medico
 
 ## Como executar
 

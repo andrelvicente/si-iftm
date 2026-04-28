@@ -62,26 +62,7 @@ result = st.session_state["result"]
 scheduler = result["scheduler"]
 best_schedule = result["best_schedule"]
 penalties = result["penalties"]
-
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Penalidade total", int(penalties["total"]))
-col2.metric("Cobertura minima", int(penalties["coverage"]))
-col3.metric("Carga horaria", int(penalties["workload"]))
-col4.metric("Turnos consecutivos", int(penalties["consecutive"]))
-
-st.subheader("Evolucao da aptidao")
-history_df = pd.DataFrame(
-    {
-        "Geracao": list(range(1, len(result["history_best"]) + 1)),
-        "Melhor": result["history_best"],
-        "Media": result["history_avg"],
-    }
-)
-st.line_chart(history_df.set_index("Geracao"))
-
-st.subheader("Escala semanal por unidade/turno")
 schedule_df = scheduler.schedule_to_dataframe(best_schedule)
-st.dataframe(schedule_df, use_container_width=True, hide_index=True)
 
 st.subheader("Escala visual")
 
@@ -156,13 +137,18 @@ for unit in UNITS:
     grid_df = build_grid_dataframe(schedule_df, unit)
     render_schedule_table(grid_df, unit)
 
+col1, col2, col3, col4 = st.columns(4)
+col1.metric("Penalidade total", int(penalties["total"]))
+col2.metric("Cobertura minima", int(penalties["coverage"]))
+col3.metric("Carga horaria", int(penalties["workload"]))
+col4.metric("Turnos consecutivos", int(penalties["consecutive"]))
+
+st.subheader("Escala semanal por unidade/turno")
+st.dataframe(schedule_df, use_container_width=True, hide_index=True)
+
 st.subheader("Carga horaria por medico")
 workload_df = scheduler.doctor_workload_dataframe(best_schedule)
 st.dataframe(workload_df, use_container_width=True, hide_index=True)
-
-st.subheader("Distribuicao de horas")
-hours_chart = workload_df[["Medico", "Horas"]].set_index("Medico")
-st.bar_chart(hours_chart)
 
 st.info(
     "Regras cobertas no fitness: "
