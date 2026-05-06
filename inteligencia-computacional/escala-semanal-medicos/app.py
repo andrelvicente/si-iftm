@@ -20,15 +20,11 @@ st.caption(
 )
 
 with st.sidebar:
-    st.header("Parametros do AG")
+    st.header("Parametros essenciais do AG")
     pop_size = st.slider("Tamanho da populacao", min_value=40, max_value=300, value=120, step=10)
-    max_gen = st.slider("Maximo de geracoes", min_value=50, max_value=1000, value=250, step=50)
+    max_gen = st.slider("Maximo de geracoes", min_value=50, max_value=5000, value=250, step=50)
     crossover_rate = st.slider("Taxa de crossover", min_value=0.1, max_value=1.0, value=0.9, step=0.05)
     mutation_rate = st.slider("Taxa de mutacao", min_value=0.01, max_value=1.0, value=0.2, step=0.01)
-    elitism = st.slider("Elitismo", min_value=1, max_value=10, value=2, step=1)
-    stagnation = st.slider("Limite de estagnacao", min_value=10, max_value=300, value=50, step=10)
-    selection_method = st.selectbox("Selecao", options=["tournament", "roulette"], index=0)
-    seed = st.number_input("Seed", min_value=0, max_value=99999, value=42, step=1)
 
     run_button = st.button("Gerar Escala", type="primary")
 
@@ -40,10 +36,6 @@ def run_scheduler() -> dict:
         max_generations=max_gen,
         crossover_rate=crossover_rate,
         mutation_rate=mutation_rate,
-        elitism_size=elitism,
-        selection_method=selection_method,
-        stagnation_limit=stagnation,
-        seed=int(seed),
     )
     scheduler = WeeklyDoctorSchedulerGA(doctors=doctors, config=config)
     result = scheduler.run()
@@ -142,6 +134,23 @@ col1.metric("Penalidade total", int(penalties["total"]))
 col2.metric("Cobertura minima", int(penalties["coverage"]))
 col3.metric("Carga horaria", int(penalties["workload"]))
 col4.metric("Turnos consecutivos", int(penalties["consecutive"]))
+
+st.subheader("Curva de evolucao")
+history_best = result["history_best"]
+history_avg = result["history_avg"]
+if history_best and history_avg and len(history_best) == len(history_avg):
+    evolution_df = pd.DataFrame(
+        {
+            "Melhor fitness": history_best,
+            "Media da populacao": history_avg,
+        },
+        index=range(1, len(history_best) + 1),
+    )
+    evolution_df.index.name = "Geracao"
+    st.caption("Fitness total (soma das penalidades): quanto menor, melhor. Duas series por geracao: melhor individuo e media da populacao.")
+    st.line_chart(evolution_df)
+else:
+    st.warning("Historico de geracoes indisponivel para plotar.")
 
 st.subheader("Escala semanal por unidade/turno")
 st.dataframe(schedule_df, use_container_width=True, hide_index=True)
