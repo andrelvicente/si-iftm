@@ -1,0 +1,4 @@
+cenario,n_pontos,SSE_inertia,distribuicao,centroides
+K-Means SEM outliers,60,63.85,"{0: 20, 1: 20, 2: 20}","[(np.float64(-0.136), np.float64(5.0896)), (np.float64(-5.1409), np.float64(-5.2089)), (np.float64(4.9768), np.float64(-3.9606))]"
+K-Means COM outliers,65,563.74,"{0: 22, 1: 22, 2: 21}","[(np.float64(-0.1237), np.float64(5.4451)), (np.float64(5.7517), np.float64(-3.8278)), (np.float64(-4.8961), np.float64(-5.5323))]"
+K-Medoids COM outliers,65,1968.3,"{0: 21, 1: 2, 2: 42}","[(np.float64(-0.0925), np.float64(4.7591)), (np.float64(10.0), np.float64(10.0)), (np.float64(3.465), np.float64(-4.0212))]"
