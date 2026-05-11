@@ -3,9 +3,8 @@
 
 ## Integrantes
 
-- Nome 1:
-- Nome 2:
-- Nome 3:
+- André Luiz Vicente Silva
+- Ruan Pablo de Assis Neres
 
 ---
 
