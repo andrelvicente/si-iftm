@@ -90,6 +90,7 @@ class WeeklyDoctorSchedulerGA:
                 used_in_shift = set()
                 for unit_idx in range(len(UNITS)):
                     # Guarantee at least one Clinica Geral per unit/shift.
+                    # TODO remove this force generalist
                     general_candidates = [d for d in self.generalists if d not in used_in_shift]
                     if not general_candidates:
                         general_candidates = self.generalists[:]
@@ -167,13 +168,6 @@ class WeeklyDoctorSchedulerGA:
         return fitness_values, component_cache
 
     def _select_one(self, population: List[np.ndarray], fitness_values: np.ndarray) -> np.ndarray:
-        if self.config.selection_method == "roulette":
-            # Lower fitness is better, invert with +1 to avoid div by zero.
-            inv = 1.0 / (fitness_values + 1.0)
-            probs = inv / inv.sum()
-            idx = self.np_rng.choice(len(population), p=probs)
-            return population[int(idx)].copy()
-
         # Tournament selection (default).
         idxs = self.np_rng.choice(len(population), size=self.config.tournament_size, replace=False)
         best_idx = idxs[np.argmin(fitness_values[idxs])]
@@ -187,6 +181,7 @@ class WeeklyDoctorSchedulerGA:
         child_b = parent_b.copy()
 
         # Crossover by swapping day blocks (as required in assignment).
+        #TODO cut more that ralf
         d1, d2 = sorted(self.rng.sample(range(len(DAYS)), 2))
         child_a[d1 : d2 + 1] = parent_b[d1 : d2 + 1]
         child_b[d1 : d2 + 1] = parent_a[d1 : d2 + 1]
