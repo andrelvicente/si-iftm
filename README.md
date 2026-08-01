@@ -1,4 +1,4 @@
-# SI — IFTM
+# SI/IFTM
 
 Repositório com materiais, exercícios, provas e projetos do curso de **Sistemas para Internet** do IFTM.
 
