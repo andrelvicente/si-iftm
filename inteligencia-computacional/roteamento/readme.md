@@ -1,18 +1,3 @@
-Sim. O primeiro exercício já é, por definição, um problema clássico de roteamento resolvido com árvore de busca.
-
-O ponto é que ele mistura:
-
-* roteamento
-* otimização
-* grafos
-* árvore de estados
-
-Mas você pode focar apenas na parte de roteamento usando técnicas de busca em árvore, sem entrar em heurísticas avançadas.
-
-Uma formulação mais “pura” do exercício ficaria assim:
-
----
-
 # Exercício — Roteamento entre Cidades com Árvore de Busca
 
 ## Contexto
@@ -126,32 +111,3 @@ A → C → E → F
 Custo total:
 10 km
 ```
-
----
-
-# O que este exercício trabalha
-
-Aqui o foco fica praticamente só em:
-
-* roteamento
-* exploração de caminhos
-* árvore de busca
-* expansão de nós
-* custo acumulado
-* escolha de caminho ótimo
-
-Sem entrar diretamente em:
-
-* TSP completo
-* poda complexa
-* programação dinâmica
-* metaheurísticas
-
-Esse formato é muito usado para ensinar:
-
-* DFS
-* BFS
-* Dijkstra
-* A*
-* Uniform Cost Search
-* IA clássica de busca em estados.
