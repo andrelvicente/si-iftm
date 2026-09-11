@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+input[type="text"] {
+    width: 420px;
+    padding: 6px 8px;
+    font-size: 16px;
+}
+
+button {
+    margin-right: 4px;
+}
+
+#cracha {
+    width: 340px;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 28px 16px;
+    box-sizing: border-box;
+}
+
+#modeloCracha hr {
+    width: 110px;
+    border: none;
+    border-top: 3px solid #000;
+    margin: 16px auto;
+}
+
+#modeloCracha hr:first-child {
+    width: 130px;
+}
+
+#espacoLogo {
+    height: 48px;
+}
+
+#cracha p {
+    margin: 8px 0;
+}
+
+#nomeCracha {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 4px;
+}
+
+#iniciaisCracha {
+    color: #555;
+    font-size: 18px;
+}
+
+#logoCracha {
+    display: block;
+    width: 150px;
+    margin: 16px auto;
+}
+
+#cargoCracha {
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+#salaCracha {
+    margin: 0;
+}
